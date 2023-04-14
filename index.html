@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> 
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>Aarya</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
@@ -30,7 +31,7 @@
     <div class="introText lozad">
         <h2>Elevate your investment game with Aarya Coin.</h2>
         <p>A coin with well managed tokenomics to provide
-            transparency for investors and security for users.</p> 
+            transparency for investors and security for users.</p>
     </div>
     <div class="infoContainer">
         <div class="logo"><img src="images/logo.jpg" alt=""></div>
@@ -43,15 +44,45 @@
                 providing users with a trustworthy and reliable investment option. Join us on this exciting journey as
                 we strive to revolutionize the cryptocurrency landscape with Aarya Coin!</div>
             <a href="documents/whitepaper.pdf" class="learn-more"><button id="whitepaper">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span> whitepaper
-            </button>
-        </a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span> whitepaper
+                </button>
+            </a>
         </div>
     </div>
-    <div class=callToAction data-aos=flip-right>
+    <section class="featuresWrapper">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="box" id="f1">
+                <div class="glass"></div>
+                <div class="content">
+                    <h3>Blazingly Fast</h3>
+                    <div class="iconWrapper"><img class="f-icons lozad" src="images/f1.png" alt=""></div>
+                    <p>Benefit from rapid transaction processing, ensuring quick and efficient transactions for a seamless experience.</p>
+                </div>
+            </div>
+            <div class="box" id="f2">
+                <div class="glass"></div>
+                <div class="content">
+                    <h3>Low Cost</h3>
+                    <div class="iconWrapper"><img class="f-icons lozad" src="images/f2.png" alt=""></div>
+                    <p>Save on transaction fees with our cost-effective approach, providing affordable transactions for all users.</p>
+                </div>
+            </div>
+            <div class="box" id="f3">
+                <div class="glass"></div>
+                <div class="content">
+                    <h3>Innovative</h3>
+                    <div class="iconWrapper"><img class="f-icons lozad" src="images/f3.png" alt=""></div>
+                    <p>Constant Evolution with Innovative Solutions to meet the market's demand. <br></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class=callToAction>
         <div class=growthImg>
             <svg id="freepik_stories-crypto-portfolio" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
                 version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
@@ -1601,12 +1632,13 @@
             <h3>Ready to join the revolution?</h3>
             <p>Invest with confidence and unlock the potential of cryptocurrency trading Invest in Aarya Coin today and
                 experience transparency, security, and efficiency.</p><br>
-                <div class="tooltip"> Token Address:
-                    <span onclick="copyToClipboard()" style="text-decoration:underline;cursor: pointer;">0xAbCdEfGhIjKlMnOpQrStUvWxYz</span>
-                    <div class="tooltiptext">Copied to clipboard!</div>
-                  </div>
-                
-                
+            <div class="tooltip"> Token Address:
+                <span onclick="copyToClipboard()"
+                    style="text-decoration:underline;cursor: pointer;">0xAbCdEfGhIjKlMnOpQrStUvWxYz</span>
+                <div class="tooltiptext">Copied to clipboard!</div>
+            </div>
+
+
             <a class=learn-more href="https://app.uniswap.org/#/swap">
                 <div class="buttonsCta">
                     <button class="btnCta "><span></span>
@@ -1621,8 +1653,8 @@
     <footer>&copy;&nbsp; Aarya &nbsp;<span id="copyright-year"></span></footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script>
-const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-observer.observe();
+        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+        observer.observe();
     </script>
     <script>
         const target = document.getElementById("freepik_stories-crypto-portfolio");
@@ -1647,32 +1679,36 @@ observer.observe();
         createObserver(target, callback);
     </script>
     <script>
-function copyToClipboard() {
-      /* Code to copy contract address to clipboard */
-      var copyText = document.createElement("textarea");
-      copyText.value = "0x1234567890abcdef1234567890abcdef12345678";
-      document.body.appendChild(copyText);
-      copyText.select();
-      document.execCommand("copy");
-      document.body.removeChild(copyText);
+        function copyToClipboard() {
+            /* Code to copy contract address to clipboard */
+            var copyText = document.createElement("textarea");
+            copyText.value = "0x1234567890abcdef1234567890abcdef12345678";
+            document.body.appendChild(copyText);
+            copyText.select();
+            document.execCommand("copy");
+            document.body.removeChild(copyText);
 
-      /* Keep contract address selected for 3 seconds */
-      var contractAddress = document.querySelector('.tooltip span');
-      contractAddress.focus();
-      setTimeout(function() {
-        contractAddress.blur();
-      }, 3000);
-    }
+            /* Keep contract address selected for 3 seconds */
+            var contractAddress = document.querySelector('.tooltip span');
+            contractAddress.focus();
+            setTimeout(function () {
+                contractAddress.blur();
+            }, 3000);
+        }
     </script>
-<script>
-ScrollReveal().reveal('.introText', { delay: 300 });
-ScrollReveal().reveal('.infoContainer', { delay: 300 });
-ScrollReveal().reveal('.logo', { delay: 600 });
-ScrollReveal().reveal('.infoTextHeading', { delay: 800 });
-ScrollReveal().reveal('.infoText', { delay: 1000 });
-ScrollReveal().reveal('#whitepaper', { delay: 1000 });
-ScrollReveal().reveal('.callToAction', { delay: 300 });
-</script>
+    <script>
+        ScrollReveal().reveal('.introText', { delay: 300 });
+        ScrollReveal().reveal('.infoContainer', { delay: 300 });
+        ScrollReveal().reveal('.logo', { delay: 600 });
+        ScrollReveal().reveal('.infoTextHeading', { delay: 800 });
+        ScrollReveal().reveal('.infoText', { delay: 1000 });
+        ScrollReveal().reveal('#whitepaper', { delay: 500 });
+        ScrollReveal().reveal('.features', { delay: 100 });
+        ScrollReveal().reveal('#f1', { delay: 100 });
+        ScrollReveal().reveal('#f2', { delay: 200 });
+        ScrollReveal().reveal('#f3', { delay: 300 });
+        ScrollReveal().reveal('.callToAction', { delay: 300 });
+    </script>
     <script>
         // Get current year
         var currentYear = new Date().getFullYear();

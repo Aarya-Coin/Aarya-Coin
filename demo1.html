@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: #1e1e1e;
+        }
+        .htextContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            /* flex-direction: column; */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-53%);
+        }
+
+        @font-face {
+            font-family: Blanka-Regular;
+            src: url(fonts/Blanka-Regular.otf);
+        }
+
+        .htextContainer h1 {
+            /* letter-spacing: 5px; */
+            /* color: #ff5e00c1; */
+            font-family: 'Blanka-Regular', sans-serif;
+        }
+
+        .htextContainer #first {
+            display: inline;
+            font-size: 18rem;
+            filter: drop-shadow(0 0 25px #ff5e00);
+            color: #ffa064;
+        }
+
+        .htextContainer #text {
+            display: inline;
+            position: relative;
+            font-size: 8rem;
+            left: -3rem;
+            top: 3rem;
+            letter-spacing: -5px;
+            color: #ff6300;
+            z-index: -1;
+            text-shadow: 5px 5px #ff62005f;
+        }
+
+        .htextContainer #text::after {
+            position: absolute;
+            content: '';
+            width: 160%;
+            height: 5px;
+            background-color: #FAD4AB;
+            bottom: 2rem;
+            left: -10rem;
+            z-index: -1;
+        }
+
+        #arrow-end {
+            position: relative;
+            left: 2rem;
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+
+        #arrow-end::before {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 3px;
+            background-color: #FAD4AB;
+            font-size: 2rem;
+            top: 6.5rem;
+            right: 3rem;
+            top: 102px;
+            right: 50px;
+            z-index: 2;
+            transform: rotate(45deg);
+            border-radius: 3px;
+        }
+
+        #arrow-end::after {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 3px;
+            background-color: #FAD4AB;
+            font-size: 2rem;
+            top: 7.5rem;
+            right: 3rem;
+            top: 114px;
+            right: 50px;
+            z-index: 2;
+            transform: rotate(-45deg);
+            border-radius: 3px;
+        }
+
+        .htextContainer h1 {
+            width: -webkit-max-content;
+            width: -moz-max-content;
+            width: max-content;
+            white-space: nowrap;
+            margin: 0;
+            line-height: 150%;
+            font-family: 'Blanka-Regular', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="htextContainer">
+        <h1 id="first">A</h1>
+        <h1 id="text">ARYA</h1>
+        <span id="arrow-end"></span>
+    </div>
+</body>
+
+</html>

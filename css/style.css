@@ -1128,7 +1128,6 @@ footer .social-links .links a:hover{
 
 
 @media(max-width:800px) {
-
   .htextContainer h1 {
     font-size: 5rem;
   }
@@ -1210,3 +1209,20 @@ footer .social-links .links a:hover{
     transition: 0.4s ease-in-out;
   }
 }
+
+@media(max-width:426px){
+.hero .coin img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+}
+
+
+@media(max-width:376px){
+  .hero .coin img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+  }
+  }

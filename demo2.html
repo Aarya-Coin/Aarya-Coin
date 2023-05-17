@@ -19,7 +19,7 @@
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
-  background-color: rgb(57, 57, 57);
+  background-color: #e2e2e2;
 }
 
 canvas {
@@ -29,7 +29,7 @@ canvas {
   height: 80vh;
   object-fit: cover;
   margin: 2rem 16rem;
-  filter: drop-shadow(0 100mm 30mm #20202074);
+  filter: drop-shadow(0 90mm 30mm #20202085);
 }
 
 .details {
@@ -37,17 +37,17 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8rem;
+  font-size: 4rem;
 }
 
 .ball-text {
   position: fixed;
   z-index: 2;
-  color: white;
-  font-size: 10rem;
+  color: rgb(14, 14, 14);
+  font-size: 8rem;
   right: 20%;
   bottom: 40%;
-  transform: translate(-20%, -40%);
+  /* transform: translate(-20%, -40%); */
 }
 
 @media screen and (max-width: 1024px) {
@@ -69,6 +69,8 @@ canvas {
     <div class="details">
       <h1>Revolution in Web 3.0</h1>
     </div>
+
+
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"

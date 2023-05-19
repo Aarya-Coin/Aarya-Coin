@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="css/featuresCard.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://kit.fontawesome.com/a81f64a541.js" crossorigin="anonymous"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+
     <!-- Google tag (gtag.js) -->
 
 
@@ -24,37 +30,27 @@
 
 <body>
     <nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="#">AARYA</a>
-            </div>
-            <div class="listContainer">
-                <div class="main_list" id="mainListDiv">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#tokenomics">Tokenomics</a></li>
-                        <li><a href="#roadmap">Roadmap</a></li>
-                        <li><a href="#faqs">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="media_button">
-                    <button class="main_media_button" id="mediaButton">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-
+        <div class="nav-bg"></div>
+        <div class="logo"><a href="#">AARYA</a></div>
+        <div class="links">
+            
+            <span><a href="#home">Home</a></span>
+            <span><a href="#about">About</a></span>
+            <span><a href="#tokenomics">Tokenomics</a></span>
+            <span><a href="#roadmap">Roadmap</a></span>
+            <span><a href="#faq">FAQs</a></span>
+        </div>
+        <div class="links-bg"></div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
         </div>
     </nav>
     <div class="hero" id="home">
         <div class="hvideos" id="v1"> <video autoplay loop muted playsinline id="hero-video1" class="bg-video lozad"
-                data-poster="image/ancient-poster.webp">
+                data-poster="images/ancient-poster.webp">
                 <source data-src="videos/ancient-1.webm" type="video/webm">
             </video></div>
-        <div class="hvideos" id="v2"> <video autoplay loop muted playsinline id="hero-video2" class="bg-video lozad" data-poster="image/modern-poster.webp">
+        <div class="hvideos" id="v2"> <video autoplay loop muted playsinline id="hero-video2" class="bg-video lozad" data-poster="images/modern-poster.webp">
                 <source data-src="videos/modern-1.webm" type="video/webm">
             </video></div>
 
@@ -67,12 +63,12 @@
             transparency for investors and security for users.</p>
     </div>
     <div class="infoContainer" id="tokenomics">
-        <div class="bg-video"><video autoplay loop muted plays-inline class="num-video lozad" data-poster="image/num-video-poster.webp">
+        <div class="bg-video"><video autoplay loop muted plays-inline class="num-video lozad" data-poster="images/num-video-poster.webp">
             <source data-src="videos/intro.webm" type="video/webm">
         </video></div>
         <div class="logo"><img src="images/logo.png" alt=""></div>
         <div class="infoTextWrapper">
-            <div class="infoTextHeading">What is Aarya ?</div>
+            <div class="infoTextHeading"><h1>What is Aarya ?</h1></div>
             <div class="infoText">Aarya(ARY) is a cutting-edge ERC20 token that is committed to providing users with a
                 secure and transparent trading experience. Our mission is to create a platform that brings transparency
                 and security to the world of cryptocurrencies. Our core team values hard work, integrity, commitment,
@@ -89,7 +85,7 @@
         </div>
     </div>
     <section class="endElements">
-    <section class="featuresWrapper" id="roadmap">
+    <section class="featuresWrapper">
         <h2>Features</h2>
         <!-- <div class="features">
             <div class="box" id="f1">
@@ -231,6 +227,61 @@
               </div>
         </div>
     </section>
+    <h3 class="main-title" id="roadmap">Roadmap</h3>
+  <section class="section-rmap">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+              <div class="swiper-slide rSlide">
+                <div class="slide-container">
+                    <h2 class="slide-Title">Phase 1</h2>
+                    <div class="slide-description">
+                      <ul>
+                        <li>Complete smart contract development,
+                            testing, and auditing.
+                            </li>
+                        <li>Launch Aarya Coin on Polygon blockchain.
+                        </li>
+                        <li>Create dedicated website and social media
+                            for promotion</li>
+                        <li>Develop partnerships with exchanges,
+                            wallets, and platforms. </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <div class="swiper-slide rSlide">
+                <div class="slide-container">
+                    <h2 class="slide-Title">Phase 2</h2>
+                    <div class="slide-description">
+                      <ul>
+                        <li>Expand Aarya's adoption in diverse sectors</li>
+                        <li>Improve Aarya on the basis of feedback and market demand </li>
+                        <li>Regularly update and improve Aarya Coin
+                            ecosystem based on feedback and market
+                            demand.</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <div class="swiper-slide rSlide">
+                <div class="slide-container">
+                    <h2 class="slide-Title">Phase 3</h2>
+                    <div class="slide-description">
+                      <ul>
+                        <li>Expand use cases & adoption in industries/sectors.
+                        </li>
+                        <li>Implemention of ZKP for enhanced privacy</li>
+                        <li>Establish strategic partnerships for utility &
+                            acceptance.
+                            </li>
+                        <li>Launching Aarya exclusive NFTs </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+  </section>
 
     <div class=callToAction>
         <div class=growthImg>
@@ -1577,21 +1628,25 @@
                     style="text-decoration:underline;cursor: pointer; color: black;word-wrap: ;"> 0x0c3B13f9D5156d1195644852661bA61ae53A423C</span>
                 <div class="tooltiptext">Copied to clipboard!</div> 
             </div> -->
+            <div class="buttonsCta">
+                <button class="btnCta" onclick="addToWallet()"><span></span>
+                    <p data-start="Get Ready..." data-text="Invest" data-title="Add to Wallet"></p>
+                </button>
+            </div>
 
-
-            <a class=learn-more href="https://app.uniswap.org/#/swap">
+            <!-- <a class=learn-more href="https://app.uniswap.org/#/swap">
                 <div class="buttonsCta">
                     <button class="btnCta "><span></span>
                         <p data-start="Get Ready..." data-text="Empower" data-title="Invest!"></p>
                     </button>
                 </div>
-            </a>
+            </a> -->
             <br><br>
         </div>
     </div>
 </section>
 
-    <section class="faqSection" id="faqs">
+    <section class="faqSection" id="faq">
         <div class="faqContainer">
 
             <button class="accordion">What is Aarya?</button>
@@ -1651,6 +1706,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <!-- js for accordion -->
     <script>
         const accordionBtns = document.querySelectorAll(".accordion");
 
@@ -1673,10 +1729,12 @@
         });
 
     </script>
+   
     <script>
         const observer = lozad();
         observer.observe();
     </script>
+     <!-- js to animate the svg on scroll -->
     <script>
         const target = document.getElementById("freepik_stories-bitcoin-p2p");
         function callback(entries, observer) {
@@ -1699,24 +1757,7 @@
 
         createObserver(target, callback);
     </script>
-    <script>
-        function copyToClipboard() {
-            /* Code to copy contract address to clipboard */
-            var copyText = document.createElement("textarea");
-            copyText.value = "0x0c3B13f9D5156d1195644852661bA61ae53A423C";
-            document.body.appendChild(copyText);
-            copyText.select();
-            document.execCommand("copy");
-            document.body.removeChild(copyText);
 
-            /* Keep contract address selected for 3 seconds */
-            var contractAddress = document.querySelector('.tooltip span');
-            contractAddress.focus();
-            setTimeout(function () {
-                contractAddress.blur();
-            }, 3000);
-        }
-    </script>
     <script>
         ScrollReveal().reveal('.introText', { delay: 300 });
         ScrollReveal().reveal('.infoContainer', { delay: 300 });
@@ -1731,50 +1772,52 @@
         ScrollReveal().reveal('.callToAction', { delay: 300 });
     </script>
             <!-- intersection observer js for changing navbar styling once crossed the section -->
-            <script>
+    <script>
 
-                const navbar = document.querySelector(".nav");
-                const heroSection = document.querySelector(".hero");
-          
-                if (screen.width > 767) {
-                  var heroSectionOptions = {
-                    rootMargin: "-100px 0px 0px 0px",
-                  };
+        const navbar = document.querySelector(".nav");
+        const heroSection = document.querySelector(".hero");
+
+        if (screen.width > 767) {
+            var heroSectionOptions = {
+            rootMargin: "-100px 0px 0px 0px",
+            };
+        }
+
+        else {
+            var heroSectionOptions = {
+            rootMargin: "-50px 0px 0px 0px",
+            };
+        }
+        const heroSectionObserver =
+            new IntersectionObserver(function (entries, navbar) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                 console.log("The navbar is styled and scrolled");
+                 console.log(entry.target);
+                $(".nav .nav-bg").css("background-color", "#000000a8");
+                $('.nav').css("transition", "0.3s ease-in-out");
+                $('.nav .nav-bg').css("backdrop-filter", "blur(3px)");
+                $('.nav .logo a').css("color", "#fff");
+                $('.nav .links span a').css("color", "#b7b7b7");
+
+
                 }
-          
                 else {
-                  var heroSectionOptions = {
-                    rootMargin: "-50px 0px 0px 0px",
-                  };
+                console.log("The navbar is back on heroSection");
+                $(".nav .nav-bg").css("background-color", "transparent");
+                $('.nav').css("transition", "0.3s ease-in-out");
+                $('.nav .nav-bg').css("backdrop-filter", "blur(0px)");
+                $('.nav .logo a').css("color", "#d8b55b");
+                $('.nav .links span a').css("color", "silver");
                 }
-                const heroSectionObserver =
-                  new IntersectionObserver(function (entries, navbar) {
-                    entries.forEach(entry => {
-                      if (!entry.isIntersecting) {
-                        // console.log("The navbar is styled and scrolled");
-                        // console.log(entry.target);
-                        $(".nav").css("background-color", "#000000a8");
-                        $('.nav').css("transition", "0.3s ease-in-out");
-                        $('.nav').css("backdrop-filter", "blur(3px)");
-                        $('.container .logo a').css("color", "#fff");
-          
-          
-                      }
-                      else {
-                        console.log("The navbar is back on heroSection");
-                        $(".nav").css("background-color", "transparent");
-                        $('.nav').css("transition", "0.3s ease-in-out");
-                        $('.nav').css("backdrop-filter", "blur(0px)");
-                        $('.container .logo a').css("color", "#d8b55b");
-          
-                      }
-          
-                    })
-                  }, heroSectionOptions);
-          
-                heroSectionObserver.observe(heroSection);
-          
-              </script>
+
+            })
+            }, heroSectionOptions);
+
+        heroSectionObserver.observe(heroSection);
+
+    </script>
+
     <script>
         // Get current year
         var currentYear = new Date().getFullYear();
@@ -1790,8 +1833,34 @@
         // }
         // updateCopyrightYear();
     </script>
-    <script src="js/navbar.js"></script>
+
+    <!-- <script src="js/navbar.js"></script> -->
+    <script src="js/nav.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- <script src="js/roadmap.js"></script> -->
+    <script src="js/addToken.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 1,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      breakpoints:{
+        1025:{
+            slidesPerView: 1,
+        }
+      },
+    });
+    </script>
+
 </body>
 
 </html>

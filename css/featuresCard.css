@@ -191,6 +191,7 @@
   @media (max-width:426px) {
     .featuresContainer{
         flex-direction: column;
+        gap: 4rem;
     }
   }
 

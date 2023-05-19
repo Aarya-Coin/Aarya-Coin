@@ -328,7 +328,6 @@ button {
 .infoContainer .bg-video {
   position: absolute;
   z-index: -1;
-  top: 2rem;
 }
 
 .infoContainer .bg-video::after {
@@ -1379,7 +1378,11 @@ footer .social-links .links a:hover {
   .infoContainer{
     margin-top: -2.2rem;
   }
-
+  .infoContainer .bg-video {
+    position: absolute;
+    z-index: -1;
+    top: 2rem;
+  }
   .section-rmap {
     padding: 0 1rem;
   }

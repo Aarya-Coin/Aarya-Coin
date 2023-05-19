@@ -39,13 +39,14 @@
             <span><a href="#tokenomics">Tokenomics</a></span>
             <span><a href="#roadmap">Roadmap</a></span>
             <span><a href="#faq">FAQs</a></span>
+            <div class="animation start-home"></div>
         </div>
         <div class="links-bg"></div>
         <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
+            <img src="images/menu.svg" style="height: 35px;width:35px;" alt="">
         </div>
     </nav>
-    <div class="hero" id="home">
+    <section class="hero" id="home">
         <div class="hvideos" id="v1"> <video autoplay loop muted playsinline id="hero-video1" class="bg-video lozad"
                 data-poster="images/ancient-poster.webp">
                 <source data-src="videos/ancient-1.webm" type="video/webm">
@@ -55,14 +56,14 @@
             </video></div>
 
 <div class="coin"><img class="lozad" data-src="images/transparent1/1.webp" alt=""></div>
-    </div>
+        </section>
 
-    <div class="introText lozad" id="about">
+    <section class="introText lozad" id="about">
         <h2>Elevate your investment game with Aarya.</h2>
         <p>A token with well managed tokenomics to provide
             transparency for investors and security for users.</p>
-    </div>
-    <div class="infoContainer" id="tokenomics">
+        </section>
+    <section class="infoContainer" id="tokenomics">
         <div class="bg-video"><video autoplay loop muted plays-inline class="num-video lozad" data-poster="images/num-video-poster.webp">
             <source data-src="videos/intro.webm" type="video/webm">
         </video></div>
@@ -83,38 +84,10 @@
                 </button>
             </a>
         </div>
-    </div>
+    </section>
     <section class="endElements">
     <section class="featuresWrapper">
         <h2>Features</h2>
-        <!-- <div class="features">
-            <div class="box" id="f1">
-                <div class="glass"></div>
-                <div class="content">
-                    <h3>Blazingly Fast</h3>
-                    <div class="iconWrapper"><img class="f-icons lozad" src="images/f1.png" alt=""></div>
-                    <p>Benefit from rapid transaction processing, ensuring quick and efficient transactions for a
-                        seamless experience.</p>
-                </div>
-            </div>
-            <div class="box" id="f2">
-                <div class="glass"></div>
-                <div class="content">
-                    <h3>Low Cost</h3>
-                    <div class="iconWrapper"><img class="f-icons lozad" src="images/f2.png" alt=""></div>
-                    <p>Save on transaction fees with our cost-effective approach, providing affordable transactions for
-                        all users.</p>
-                </div>
-            </div>
-            <div class="box" id="f3">
-                <div class="glass"></div>
-                <div class="content">
-                    <h3>Innovative</h3>
-                    <div class="iconWrapper"><img class="f-icons lozad" src="images/f3.png" alt=""></div>
-                    <p>Constant Evolution with Innovative Solutions to meet the market's demand. <br></p>
-                </div>
-            </div>
-        </div> -->
         <div class="featuresContainer">
             <div class="f-card">
                 <div class="f-content">
@@ -227,8 +200,8 @@
               </div>
         </div>
     </section>
-    <h3 class="main-title" id="roadmap">Roadmap</h3>
-  <section class="section-rmap">
+    <section class="section-rmap" id="roadmap">
+        <h3 class="main-title">Roadmap</h3>
     <div class="swiper-container">
         <div class="swiper-wrapper">
               <div class="swiper-slide rSlide">
@@ -239,7 +212,7 @@
                         <li>Complete smart contract development,
                             testing, and auditing.
                             </li>
-                        <li>Launch Aarya Coin on Polygon blockchain.
+                        <li>Launch Aarya(ARY) on Polygon blockchain.
                         </li>
                         <li>Create dedicated website and social media
                             for promotion</li>
@@ -1647,6 +1620,11 @@
 </section>
 
     <section class="faqSection" id="faq">
+        <div class="partner">
+        <h3>Associated Partner:</h3>
+        <img class="partnerLogo" src="images/money-protocol.webp" alt="MONEY Protocol">
+        <h3>MONEY Protocol</h4>
+        </div>
         <div class="faqContainer">
 
             <button class="accordion">What is Aarya?</button>
@@ -1692,6 +1670,24 @@
                 </p>
             </div>
         </div>
+        <div class="partner wallet">
+            <h3>Available on:</h3>
+            <div class="wrapper">
+                    <div class="sub-wrapper" onclick="toPolygonscan()">
+                    <img class ="partnerLogo" src="images/polygon.webp" alt="Polygon">
+                    <h3>Polygon</h3>
+                    </div>
+                    <div class="sub-wrapper">
+                        <img class="partnerLogo" src="images/metamask.webp" alt="Metamask" onclick="addToWallet()">
+                    <h3>Metamask</h3>
+                    </div>
+                    <div class="sub-wrapper">
+                        <img class="partnerLogo" src="images/solana.png" alt="Solana" onclick="toSolscan()">
+                    <h3>Solana</h3>
+                    </div>
+                    
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -1733,6 +1729,16 @@
     <script>
         const observer = lozad();
         observer.observe();
+    </script>
+    <!-- js to send user to blockchain explorer on clicking the logo -->
+    <script>
+        function toPolygonscan() {
+  window.open('https://polygonscan.com/token/0x0c3B13f9D5156d1195644852661bA61ae53A423C', '_blank');
+}
+
+function toSolscan() {
+  window.open('https://solscan.io/token/G2owsbvXJBRJHpjiZD3BHCsteBZXJwKWXcqwajWGvopi', '_blank');
+}
     </script>
      <!-- js to animate the svg on scroll -->
     <script>
@@ -1792,8 +1798,7 @@
             new IntersectionObserver(function (entries, navbar) {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
-                 console.log("The navbar is styled and scrolled");
-                 console.log(entry.target);
+                // Navbar styling when the page is scrolled
                 $(".nav .nav-bg").css("background-color", "#000000a8");
                 $('.nav').css("transition", "0.3s ease-in-out");
                 $('.nav .nav-bg').css("backdrop-filter", "blur(3px)");
@@ -1803,7 +1808,7 @@
 
                 }
                 else {
-                console.log("The navbar is back on heroSection");
+                // Navbar styling when it is back on hero section   
                 $(".nav .nav-bg").css("background-color", "transparent");
                 $('.nav').css("transition", "0.3s ease-in-out");
                 $('.nav .nav-bg').css("backdrop-filter", "blur(0px)");

@@ -21,11 +21,6 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
-<script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
-
-
-
-    <!-- Google tag (gtag.js) -->
 
 
 </head>
@@ -66,7 +61,7 @@
             transparency for investors and security for users.</p>
         </section>
     <section id="tokenomics">
-        <div class="container">
+         <div class="container">
             <div class="video-container">
               <video autoplay loop muted class="num-video lozad" data-poster="images/num-video-poster.webp">
                 <source data-src="videos/intro.webm" type="video/webm">
@@ -1599,26 +1594,38 @@
             <h3>Ready to join the revolution?</h3>
             <p>Invest with confidence and unlock the potential of cryptocurrency trading Invest in Aarya today and
                 experience transparency, security, and efficiency.</p><br>
+                <p>Contract Address:</p>
+                <p><span style="word-break: break-word; color: #e3e3e3;">0x0c3B13f9D5156d1195644852661bA61ae53A423C</span>  <button class="copy-button" onclick="copyToClipboard()">
+                    <i id="copyIcon" class="fa-regular fa-clone"></i>
+                    <span id="copyText">Copy Address</span>
+                  </button>
+                </p>
                 <p>Blockchain Explorer:</p>
                 <p><a href="https://polygonscan.com/token/0x0c3B13f9D5156d1195644852661bA61ae53A423C" style="word-break: break-word; color: #e3e3e3;">https://polygonscan.com/token/0x0c3B13f9D5156d1195644852661bA61ae53A423C</a></p>
-            <!-- <div class="tooltip"> Blockchain Explorer:0x0c3B13f9D5156d1195644852661bA61ae53A423C
-                 <span onclick="copyToClipboard()"
-                    style="text-decoration:underline;cursor: pointer; color: black;word-wrap: ;"> 0x0c3B13f9D5156d1195644852661bA61ae53A423C</span>
-                <div class="tooltiptext">Copied to clipboard!</div> 
-            </div> -->
-            <div class="buttonsCta">
-                <button class="btnCta" onclick="addToWallet()"><span></span>
-                    <p data-start="Get Ready..." data-text="Invest" data-title="Add to Wallet"></p>
-                </button>
+                <div class="btnContainer" style="display:flex;align-items: center;justify-content: center;flex-wrap: wrap;">
+                    <div class="buttonsCta">
+                        <button class="btnCta" onclick="addToWallet()" id="btnDesktop"><span></span>
+                            <p data-start="Get Ready..." data-text="Invest" data-title="Add to Desktop"></p>
+                        </button>
+                    </div>
+                    <div class="buttonsCta">
+                        <button class="btnCta" id="btnMobile" onclick="showImage()"><span></span>
+                            <p data-start="Get Ready..." data-text="Invest" data-title="Add to Mobile"></p>
+                        </button>
+                    </div>
+                    <div class="buttonsCta">
+                        <button class="btnCta" onclick="toICO()"><span></span>
+                            <p data-start="Get Ready..." data-text="Invest" data-title="Buy Aarya"></p>
+                        </button>
+                    </div>
+                </div>
+            
+              
+            <div id="imageOverlay" onclick="closeImage()">
+              <img src="images/addToWallet.webp" alt="Image">
             </div>
-            <script>
-                
-            </script>
-            <div class="buttonsCta">
-                <button class="btnCta" onclick="toICO()"><span></span>
-                    <p data-start="Get Ready..." data-text="Invest" data-title="Buy Aarya"></p>
-                </button>
-            </div>
+
+            
 
             <!-- <a class=learn-more href="https://app.uniswap.org/#/swap">
                 <div class="buttonsCta">
@@ -1738,7 +1745,18 @@
         });
 
     </script>
-   
+   <!-- js to show hide qr code  -->
+   <script type="text/javascript">
+    function showImage() {
+      var imageOverlay = document.getElementById("imageOverlay");
+      imageOverlay.style.display = "flex";
+    }
+
+    function closeImage() {
+      var imageOverlay = document.getElementById("imageOverlay");
+      imageOverlay.style.display = "none";
+    }
+  </script>
     <script>
         const observer = lozad();
         observer.observe();
@@ -1761,6 +1779,36 @@ function toICO() {
   window.open('https://aarya-ico.netlify.app', '_blank');
 }
     </script>
+
+<!-- js for copy button -->
+<script type="text/javascript">
+    function copyToClipboard() {
+      var contractAddress = '0x0c3B13f9D5156d1195644852661bA61ae53A423C';
+
+      // Create a temporary textarea element
+      var tempTextArea = document.createElement('textarea');
+      tempTextArea.value = contractAddress;
+      document.body.appendChild(tempTextArea);
+
+      // Select and copy the contract address from the temporary textarea element
+      tempTextArea.select();
+      document.execCommand('copy');
+
+      // Remove the temporary textarea element
+      document.body.removeChild(tempTextArea);
+
+      // Update the button state and icon based on the copy status
+      var copyButton = document.querySelector('.copy-button');
+      var copyIcon = document.getElementById('copyIcon');
+      var copyText = document.getElementById('copyText');
+
+      copyButton.classList.add('copied');
+      copyIcon.classList.remove('fa-regular', 'fa-clone');
+      copyIcon.classList.add('fa-solid', 'fa-check');
+      copyText.textContent = 'Copied!';
+    }
+  </script>
+
      <!-- js to animate the svg on scroll -->
     <script>
         const target = document.getElementById("freepik_stories-bitcoin-p2p");

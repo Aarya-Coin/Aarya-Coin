@@ -19,8 +19,8 @@
     <link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/featuresCard.css">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script src="https://kit.fontawesome.com/a81f64a541.js" crossorigin="anonymous"></script>
+    <link rel="preload" fetchpriority="high" as="image" href="images/transparent1/11.webp" type="image/webp">
+    <script src="https://kit.fontawesome.com/a81f64a541.js" crossorigin="anonymous" defer></script>
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -56,7 +56,7 @@
                 <source data-src="videos/modern-1.webm" type="video/webm">
             </video></div>
 
-<div class="coin"><img class="lozad" data-src="images/transparent1/1.webp" alt="Aarya Logo"></div>
+<div class="coin"><img class="lozad" src="images/transparent1/11.webp" alt="Aarya Logo"></div>
         </section>
 
     <section class="introText lozad" id="about">
@@ -1646,7 +1646,7 @@
     <section class="faqSection" id="faq">
         <div class="partner">
         <h3>Associated Partner:</h3>
-        <img class="partnerLogo" src="images/money-protocol.webp" alt="MONEY Protocol">
+        <img class="partnerLogo lozad" data-src="images/money-protocol.webp" alt="MONEY Protocol">
         <!-- <h3>MONEY Protocol</h4> -->
         </div>
         <div class="faqContainer">
@@ -1698,15 +1698,15 @@
             <h3>Available on:</h3>
             <div class="wrapper">
                     <div class="sub-wrapper" onclick="toPolygonscan()">
-                    <img class ="partnerLogo" src="images/polygon.webp" alt="Polygon">
+                    <img class ="lozad partnerLogo" data-src="images/polygon.webp" alt="Polygon">
                     <!-- <h3>Polygon</h3> -->
                     </div>
                     <div class="sub-wrapper">
-                        <img class="partnerLogo" src="images/metamask.webp" alt="Metamask" onclick="addToWallet()">
+                        <img class="partnerLogo lozad" data-src="images/metamask.webp" alt="Metamask" onclick="addToWallet()">
                     <!-- <h3>Metamask</h3> -->
                     </div>
                     <div class="sub-wrapper">
-                        <img class="partnerLogo" src="images/solana.png" alt="Solana" onclick="toSolscan()">
+                        <img class="partnerLogo lozad" data-src="images/solana.png" alt="Solana" onclick="toSolscan()">
                     <!-- <h3>Solana</h3> -->
                     </div>
                     
@@ -1837,19 +1837,6 @@ function toICO() {
         createObserver(target, callback);
     </script>
 
-    <script>
-        ScrollReveal().reveal('.introText', { delay: 300 });
-        ScrollReveal().reveal('.infoContainer', { delay: 300 });
-        ScrollReveal().reveal('.logo', { delay: 600 });
-        ScrollReveal().reveal('.infoTextHeading', { delay: 800 });
-        ScrollReveal().reveal('.infoText', { delay: 1000 });
-        ScrollReveal().reveal('#whitepaper', { delay: 500 });
-        ScrollReveal().reveal('.features', { delay: 100 });
-        ScrollReveal().reveal('#f1', { delay: 100 });
-        ScrollReveal().reveal('#f2', { delay: 200 });
-        ScrollReveal().reveal('#f3', { delay: 300 });
-        ScrollReveal().reveal('.callToAction', { delay: 300 });
-    </script>
             <!-- intersection observer js for changing navbar styling once crossed the section -->
     <script>
 
@@ -1914,7 +1901,7 @@ function toICO() {
 
     <!-- <script src="js/navbar.js"></script> -->
     <script src="js/nav.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous" defer></script>
     <!-- <script src="js/roadmap.js"></script> -->
     <script src="js/addToken.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

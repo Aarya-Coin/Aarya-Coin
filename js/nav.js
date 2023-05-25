@@ -24,7 +24,7 @@ const navLinks = document.querySelectorAll('.nav .links span');
 
 const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    const sectionId = entry.target.getAttribute('id');
+    let sectionId = entry.target.getAttribute('id');
     const link = document.querySelector(`.nav .links span a[href="#${sectionId}"]`).parentNode;
 
     if (sectionId === 'home') {

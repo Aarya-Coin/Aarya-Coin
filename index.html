@@ -1901,10 +1901,24 @@ function toICO() {
 
     <!-- <script src="js/navbar.js"></script> -->
     <script src="js/nav.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <!-- <script src="js/roadmap.js"></script> -->
     <script src="js/addToken.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+    <script>
+        window.onload = function() {
+          var script = document.createElement('script');
+          script.src = 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js';
+          script.onload = function() {
+            // Swiper library has finished loading
+            // Now you can use the Swiper object
+            var swiper = new Swiper('.swiper-container', {
+              // Swiper configuration options
+            });
+          };
+          document.body.appendChild(script);
+        };
+      </script>
     <script>
         var swiper = new Swiper(".swiper-container", {
       effect: "coverflow",

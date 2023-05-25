@@ -85,6 +85,12 @@ button {
   margin-left: 1.8rem;
 }
 
+#mheading{
+  font-family: 'Blanka', sans-serif;
+  font-size: 2rem;
+  display: inline-block;
+}
+
 .nav .links {
   display: flex;
   align-items: center;

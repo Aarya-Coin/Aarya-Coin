@@ -1173,9 +1173,17 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
 
 .faqSection{
   display: grid;
-  grid-template-areas: "partner1 faq partner2";
+  grid-template-areas: "partner1 partner2 faq tpartner";
+  grid-template-areas: "partnerContainer faq tpartner";
   place-content: center;
   margin-top: -2rem;
+}
+
+.partnerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .partner.wallet{
@@ -1224,8 +1232,34 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
   /* flex-direction: column;
   justify-content: space-evenly; */
   place-items: center;
-  margin-top: 50%;
+  /* margin-top: 50%; */
 
+}
+
+.tpartner{
+  grid-area: tpartner;
+  height:180px;
+  /* width:300px; */
+  /* border: 2px dotted silver; */
+  border-radius: 10px;
+  /* position: absolute;
+  left: 1rem; */
+  display: grid;
+  /* flex-direction: column;
+  justify-content: space-evenly; */
+  place-items: center;
+  margin-top: 50%;
+}
+
+.tpartner img{
+  border-radius: 50%;
+    height: 90px;
+}
+
+.tpartner h3{
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Alata'!important;
 }
 
 .partner h3{
@@ -1475,10 +1509,13 @@ footer .social-links .links a:hover {
     display: grid;
     grid-template-areas: "faq faq"
                           "partner1 partner2";
+     grid-template-areas: "faq faq"
+                          "partnerContainer tpartner";                         
+  /* grid-template-areas: "partnerContainer faq tpartner"; */
     place-content: center;
     margin-top: -2rem;
   }
-  .partner{
+  .tpartner{
     margin-top: 0%;
   }
 
@@ -1540,11 +1577,13 @@ footer .social-links .links a:hover {
   } */
   .faqSection{
     display: grid;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
 grid-template-areas:  "faq"
-                      "partner1"
-                      "partner2";
+                      "tpartner"
+                      "partnerContainer";
+                      
   }
+  
 
   .partner{
     margin-top: 0%;

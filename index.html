@@ -1644,11 +1644,31 @@
 </section>
 
     <section class="faqSection" id="faq">
-        <div class="partner">
-        <h3>Associated Partner:</h3>
-        <img class="partnerLogo lozad" data-src="images/money-protocol.webp" alt="MONEY Protocol">
-        <!-- <h3>MONEY Protocol</h4> -->
+        <div class="partnerContainer">
+            <div class="partner">
+                <h3>Associated Partner:</h3>
+                <img class="partnerLogo lozad" data-src="images/money-protocol.webp" alt="MONEY Protocol">
+            </div>
+            <div class="partner wallet">
+                <h3>Available on:</h3>
+                <div class="wrapper">
+                        <div class="sub-wrapper" onclick="toPolygonscan()">
+                        <img class ="lozad partnerLogo" data-src="images/polygon.webp" alt="Polygon">
+                        <!-- <h3>Polygon</h3> -->
+                        </div>
+                        <div class="sub-wrapper">
+                            <img class="partnerLogo lozad" data-src="images/metamask.webp" alt="Metamask" onclick="addToWallet()">
+                        <!-- <h3>Metamask</h3> -->
+                        </div>
+                        <div class="sub-wrapper">
+                            <img class="partnerLogo lozad" data-src="images/solana.png" alt="Solana" onclick="toSolscan()">
+                        <!-- <h3>Solana</h3> -->
+                        </div>
+                        
+                </div>
+            </div>
         </div>
+
         <div class="faqContainer">
 
             <button class="accordion">What is Aarya?</button>
@@ -1694,23 +1714,10 @@
                 </p>
             </div>
         </div>
-        <div class="partner wallet">
-            <h3>Available on:</h3>
-            <div class="wrapper">
-                    <div class="sub-wrapper" onclick="toPolygonscan()">
-                    <img class ="lozad partnerLogo" data-src="images/polygon.webp" alt="Polygon">
-                    <!-- <h3>Polygon</h3> -->
-                    </div>
-                    <div class="sub-wrapper">
-                        <img class="partnerLogo lozad" data-src="images/metamask.webp" alt="Metamask" onclick="addToWallet()">
-                    <!-- <h3>Metamask</h3> -->
-                    </div>
-                    <div class="sub-wrapper">
-                        <img class="partnerLogo lozad" data-src="images/solana.png" alt="Solana" onclick="toSolscan()">
-                    <!-- <h3>Solana</h3> -->
-                    </div>
-                    
-            </div>
+        <div class="tpartner">
+            <h3>Trading Partner:</h3>
+
+            <a href="https://xeggex.com/market/ARY_USDT"><img class="partnerLogo lozad" data-src="images/xeggex.jpg" alt="MONEY Protocol"></a>
         </div>
     </section>
 

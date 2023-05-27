@@ -1354,7 +1354,7 @@ button.accordion:after {
 }
 
 button.accordion.is-open:after {
-  transform: rotate(405deg);
+  transform: rotate(765deg);
 }
 
 button.accordion:hover,

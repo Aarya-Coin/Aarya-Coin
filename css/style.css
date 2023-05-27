@@ -930,9 +930,53 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
   color: #000;
 }
 
-/* #btnMobile{
-  display: none;
-} */
+.btnContainer{
+  display:flex;align-items: center;justify-content: space-evenly;margin-top: 1rem;
+}
+
+.btnSecondary {
+  background-color: #ff5e0000;
+  border: none;
+  outline: 2px dashed #fff;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.btnSecondary:hover{
+  outline: 2px solid #fff;
+  box-shadow: 0 30px 80px 3px #000000e1;
+  transform: translateY(-5px);
+  outline: 2px solid white;
+}
+
+.btnPrimary{
+  background-color: #ff5d00;
+  border: none;
+  outline: 2px solid transparent;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.btnPrimary:hover{
+  box-shadow: 0 30px 80px 3px #000000e1;
+  transform: translateY(-5px);
+  outline: 2px solid white;
+}
+
 
 
   /* Styles for the image overlay */
@@ -1571,6 +1615,13 @@ footer .social-links .links a:hover {
   } */
   .section-rmap {
     padding: 0 1rem;
+  }
+  .btnContainer{
+    flex-direction: column;
+    align-items: unset;
+    gap:2.1rem;
+    margin-top: 2rem;
+    
   }
   /* .faqSection{
     padding-bottom: 580px;

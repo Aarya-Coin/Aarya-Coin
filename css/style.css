@@ -939,7 +939,7 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
   border: none;
   outline: 2px dashed #fff;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -961,7 +961,7 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
   border: none;
   outline: 2px solid transparent;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -1124,6 +1124,93 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
 
 /*styling for features section ends*/
 
+
+/*styling for use case section starts*/
+
+.useCase{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 3rem;
+  background-color: white;
+  background-image: url('https://img.freepik.com/free-vector/orange-water-color-background_1097-996.jpg?w=740&t=st=1686557448~exp=1686558048~hmac=5c79e45eccd166d9db34c5ebe44fd780c999293bb15f571370399ceb7892819d  ');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ucWrapper{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+row-gap: 2rem;
+column-gap: 4rem;
+  place-items: center;
+  width: 70%;
+}
+
+.ucCard{
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 15rem;
+  padding: 1rem;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.useCase h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.6rem;
+  margin: 3rem 0 2rem;
+}
+
+#uc1{
+  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#uc2{
+  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc2.webp");
+  color: white;
+  background-size: cover;
+  background-position-x: 50%;
+  /* background-position-y: 45%; */
+  background-repeat: no-repeat;
+}
+#uc3{
+  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc3.webp");
+  background-size: cover;
+  background-position-x: 50%;
+  /* background-position-y: 45%; */
+  background-repeat: no-repeat;
+}
+#uc4{
+  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc4.webp");
+  color: rgb(255, 255, 255);
+  background-size: cover;
+  background-position-x: 50%;
+  /* background-size: 15rem 15rem; */
+  /* background-repeat: no-repeat; */
+}
+#uc5{
+  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc5.webp");
+  color: black;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#uc6{
+  background-image: linear-gradient(to right, #000000b7, #00000096), url("../images/uc6.webp");
+  color: white;
+  background-size: cover;
+  background-position-x: 80%;
+  background-repeat: no-repeat;
+}
+/*styling for use case section ends*/
 
 /*styling for roadmap section*/
 .main-title {
@@ -1354,7 +1441,7 @@ button.accordion:after {
 }
 
 button.accordion.is-open:after {
-  transform: rotate(765deg);
+  transform: rotate(405deg);
 }
 
 button.accordion:hover,
@@ -1613,6 +1700,15 @@ footer .social-links .links a:hover {
     z-index: -1;
     top: 2rem;
   } */
+  .ucWrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+    place-items: center;
+    place-content: center;
+  }
+  .ucCard{
+    width:20rem;
+  }
   .section-rmap {
     padding: 0 1rem;
   }

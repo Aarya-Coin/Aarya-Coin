@@ -89,6 +89,29 @@
             </div>
           </div>
     </section>
+    <section class="useCase">
+        <h2>Use Cases</h2> 
+        <div class="ucWrapper">
+        <div class="ucCard" id="uc1">
+           <p>Aarya is offers long-term investment opportunities and is the perfect platform for those seeking an organic crypto token.</p>
+        </div>  
+        <div class="ucCard" id="uc2">
+            <p>Aarya can be used as a secure and fast payment method by businesses and individuals, allowing for quick and efficient transactions.</p>
+         </div> 
+         <div class="ucCard" id="uc3">
+            <p> Aarya emphasizes user privacy and security, offering privacy-focused transactions that protect sensitive financial information.</p>
+         </div> 
+         <div class="ucCard" id="uc4">
+            <p>Aarya can facilitate cross-border transactions, providing a fast and secure payment method that is not subject to traditional banking regulations.</p>
+         </div> 
+         <div class="ucCard" id="uc5">
+            <p>Aarya can be used for micropayments, allowing for the transfer of small amounts of value with low transaction fees.</p>
+         </div> 
+         <div class="ucCard" id="uc6">
+            <p>Aarya allocates a portion of its revenue to various charitable groups. Share your charity impact story with Aarya, and receive a friendly reward as a token of appreciation.</p>
+         </div> 
+         </div>
+       </section>
     <section class="endElements">
     <section class="featuresWrapper">
         <h2>Features</h2>
@@ -1607,12 +1630,9 @@
                 <p>Blockchain Explorer:</p>
                 <p><a href="https://polygonscan.com/token/0x0c3B13f9D5156d1195644852661bA61ae53A423C" style="word-break: break-word; color: #e3e3e3;">https://polygonscan.com/token/0x0c3B13f9D5156d1195644852661bA61ae53A423C</a></p>
                 <div class="btnContainer">
-                    <!-- <div class="buttonsCta">
-                        <button class="btnCta" onclick="toICO()"><span></span>
-                            <p data-start="Get Ready..." data-text="Invest" data-title="Buy Aarya"></p>
-                        </button>
-                    </div> -->
                         <button class="btnPrimary" onclick="toICO()">Buy Aarya</button>
+
+                        <button class="btnPrimary" onclick="toTrade()">Trade Aarya</button>
                     
                         <button class="btnSecondary" id="btnDesktop" onclick="addToWallet()">Add To Desktop</button>
                   
@@ -1695,8 +1715,7 @@
             <button class="accordion">What makes Aarya different from other cryptocurrencies?</button>
             <div class="accordion-content">
                 <p>
-                    Aarya boasts several unique features that differentiate it from other cryptocurrencies. These
-                    features include fast transaction times, low fees, and a robust and secure network.
+                    Aarya has faster transaction, low fees, and a robust and secure network.
                 </p>
             </div>
 
@@ -1793,6 +1812,10 @@ function toSolscan() {
 
 function toICO() {
   window.open('https://aarya-ico.netlify.app', '_self');
+}
+
+function toTrade() {
+  window.open('https://xeggex.com/market/ARY_USDT', '_blank');
 }
     </script>
 
@@ -1916,8 +1939,8 @@ function toICO() {
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <!-- <script src="js/roadmap.js"></script> -->
     <script src="js/addToken.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script>
         window.onload = function() {
           var script = document.createElement('script');
           script.src = 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js';
@@ -1930,7 +1953,7 @@ function toICO() {
           };
           document.body.appendChild(script);
         };
-      </script>
+      </script> -->
     <script>
         var swiper = new Swiper(".swiper-container", {
       effect: "coverflow",

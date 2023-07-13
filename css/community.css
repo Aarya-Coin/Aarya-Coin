@@ -2299,7 +2299,7 @@ flex-direction: column;
 .our-work{
   
   background-attachment: fixed;
-  background-image: linear-gradient(to right, #000000c3, #0000004a), url("../images/galaxy-2.jpg");
+  background-image: linear-gradient(to right, #000000c3, #0000004a), url("../images/galaxy-2.webp");
   height: 400vh;
 }
   #work-card-1{

@@ -54,7 +54,11 @@
     display: inline-block;
   }
   
-  
+#side-link{
+    position: absolute!important;
+    z-index: 1!important;
+    left: 55%!important;
+  }
   
   /*code to add a center animated line below the nav links starts*/
   

@@ -236,7 +236,7 @@ button {
   }
 
   .nav .links+.links-bg.open {
-    height: 48vh;
+    height: 48dvh;
   }
 
 }
@@ -400,6 +400,52 @@ button {
   padding-bottom: 1rem;
 }
 
+
+/*styling for intro section ends*/
+/*styling for story section starts*/
+
+.story-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.story-card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.story-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.story-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.853) 80%, rgba(0, 0, 0, 0)100%);
+    transition: opacity 0.3s;
+}
+
+.story-card:hover .story-card-image img {
+    transform: scale(1.2);
+}
+
+.story-card:hover .story-card-content {
+    opacity: 1;
+}
+
+/*styling for story section ends*/
 
 /*styling for info section starts*/
 

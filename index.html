@@ -16,12 +16,22 @@
     <link rel="canonical" href="https://aarya.network">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="css/welcome.css">
+    <script defer src="js/anime.js"></script>
+    <script defer src="js/welcome.js"></script>
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/featuresCard.css">
     <link rel="preload" fetchpriority="high" as="image" href="images/transparent1/11.webp" type="image/webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <script src="https://kit.fontawesome.com/a81f64a541.js" crossorigin="anonymous" defer></script>
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+
+</style>
         <!-- <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -129,11 +139,12 @@
         <div class="logo"><a href="#"><h1 id="mheading">AARYA</h1></a></div>
         <div class="links">
             
-            <span><a href="#home">Home</a></span>
+            <span><a href="community.html">Community</a></span>
             <span><a href="#about">About</a></span>
             <span><a href="#usecase">Use Case</a></span>
             <span><a href="#roadmap">Roadmap</a></span>
             <span><a href="#faq">FAQs</a></span>
+            <!-- <span id="side-link"><a href="community.html">Community</a></span> -->
             <div class="animation start-home"></div>
         </div>
         <div class="links-bg"></div>
@@ -141,7 +152,8 @@
             <img src="images/menu.svg" style="height: 35px;width:35px;" alt="mobile menu">
         </div>
     </nav>
-    <section class="hero" id="home">
+    <div class="main-container">
+      <section class="hero" id="home">
         <div class="hvideos" id="v1"> <video autoplay loop muted playsinline id="hero-video1" class="bg-video lozad"
                 data-poster="images/ancient-poster.webp">
                 <source data-src="videos/ancient-1.webm" type="video/webm">
@@ -206,7 +218,7 @@
             <p>Aarya allocates a portion of its revenue to various charitable groups. Share your charity impact story with Aarya, and receive a friendly reward as a token of appreciation.</p>
          </div> 
          </div>
-       </section>
+    </section>
     <section class="endElements">
     <section class="featuresWrapper">
         <h2>Features</h2>
@@ -232,16 +244,12 @@
                     </div>
               
                     <div class="f-front-content">
-                      <!-- <small class="f-badge">Pasta</small> -->
                       <div class="f-description">
                         <div class="f-title">
                           <p class="f-title">
                            Benefit from rapid transaction processing, ensuring quick and efficient transactions for a seamless experience.
                           </p>
                         </div>
-                        <!-- <p class="f-card-footer">
-                          30 Mins &nbsp; | &nbsp; 1 Serving
-                        </p> -->
                       </div>
                     </div>
                   </div>
@@ -268,16 +276,12 @@
                     </div>
               
                     <div class="f-front-content">
-                      <!-- <small class="f-badge">Pasta</small> -->
                       <div class="f-description">
                         <div class="f-title">
                           <p class="f-title">
                          Save on transaction fees with our cost-effective approach, providing affordable transactions for all users.
                           </p>
                         </div>
-                        <!-- <p class="f-card-footer">
-                          30 Mins &nbsp; | &nbsp; 1 Serving
-                        </p> -->
                       </div>
                     </div>
                   </div>
@@ -408,20 +412,10 @@
             <div id="imageOverlay" onclick="closeImage()">
               <img class="lozad"data-src="images/addToWallet.webp" alt="Add Token QR Code">
             </div>
-
-            
-
-            <!-- <a class=learn-more href="https://app.uniswap.org/#/swap">
-                <div class="buttonsCta">
-                    <button class="btnCta "><span></span>
-                        <p data-start="Get Ready..." data-text="Empower" data-title="Invest!"></p>
-                    </button>
-                </div>
-            </a> -->
             <br><br>
         </div>
     </div>
-</section>
+    </section>
 
     <section class="faqSection" id="faq">
         <div class="partnerContainer">
@@ -504,6 +498,7 @@
         </div>
     </section>
 
+    </div>
     <footer>
         <div class="copyright">&copy;&nbsp; Aarya &nbsp;<span id="copyright-year"></span></div>
 
@@ -515,6 +510,21 @@
             <div class="links"><a href="https://t.me/project_aarya"><i class="fa-brands fa-telegram"></i></a></div>
         </div>
     </footer>
+    <div class="welcome-wrapper">
+      <div class="buildings-wrapper">
+        <svg class="svg-drawing" width="1726" height="381" viewBox="0 0 1726 381" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="drawing-path" d="M0 380H320.5V305H337.5V380H361V289H391.5V380H421V61H438.5V34H454.5V22.5H469V380H529.5V250.5H565.5V167H582.5V380H628V83H738V380H801V178H865V1H940.5V380H986.5V207H1029V289H1075.5V380H1150V83H1249.5V380H1725.5" stroke="white"/>
+            </svg>
+                   
+    </div>
+      <div class="welcome">
+        <h1 class="heading">#notAmemecoin</h1>
+        <br>
+        <div class="loader-wrapper">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script>
         setTimeout(function() {

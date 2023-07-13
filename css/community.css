@@ -438,7 +438,7 @@ margin: 0;
   font-size: 2rem;
   background-image: linear-gradient(to right, #000000a2, #00000072),url("https://images.pexels.com/photos/720254/pexels-photo-720254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-image: linear-gradient(to right, #000000a2, #00000072), url("https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?auto=compress&cs=tinysrgb&w=600");
-  background-image: linear-gradient(to right, #000000c3, #0000004a), url("/images/galaxy.webp");
+  background-image: linear-gradient(to right, #000000c3, #0000004a), url("/images/galaxyc.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -544,7 +544,7 @@ margin: 0;
   background-image: url('/images/trails-bg-2.jpg');
   background-image: linear-gradient(to right, #00000079, #00000054), url("https://static.vecteezy.com/system/resources/previews/000/518/632/non_2x/vector-abstract-black-luxury-texture-silk-background-and-cloth-wave.jpg");
   background-image: linear-gradient(to right, #00000079, #00000054), url("https://static.vecteezy.com/system/resources/previews/007/105/010/non_2x/luxury-abstract-background-with-golden-and-black-shapes-metal-texture-steel-background-vactor-design-illustration-free-vector.jpg");
-  background-image: radial-gradient(#00000041, #000000b2), url("/images/galaxy-1.webp");
+  background-image: radial-gradient(#00000041, #000000b2), url("/images/galaxyc-1.jpg");
   background-color: white;
   /* background-attachment: fixed; */
   background-size: cover;
@@ -2299,7 +2299,7 @@ flex-direction: column;
 .our-work{
   
   background-attachment: fixed;
-  background-image: linear-gradient(to right, #000000c3, #0000004a), url("../images/galaxy-2.webp");
+  background-image: linear-gradient(to right, #000000c3, #0000004a), url("../images/galaxyc-2.jpg");
   height: 400vh;
 }
   #work-card-1{

@@ -2,7 +2,7 @@ var welcomeWrapper = document.querySelector('.welcome-wrapper');
 
 document.addEventListener('DOMContentLoaded', () => {
  if(sessionStorage.getItem('welcomeScreen')=='true'){
-  welcomeWrapper.remove();
+   welcomeWrapper.remove();
  }else{
         sessionStorage.setItem('welcomeScreen', true);
         // Wrapper animation
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .add({
           targets: ".welcome-wrapper",
           complete: function (anime) {
-            welcomeWrapper.remove();
+           // welcomeWrapper.remove();
           }
         });
       
@@ -47,8 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
           opacity: 1,
           easing: "easeOutExpo",
         });
+               // Loader-wrapper animation
+               anime({
+                targets: ".nav",
+                easing: "easeOutExpo",
+              });
 
 
- }
+  }
 
   });  

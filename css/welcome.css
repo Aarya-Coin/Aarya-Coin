@@ -100,3 +100,9 @@
     border-radius: 100px;
     background: #d8b55b;
   }
+
+  @media (max-width:426px) {
+    .welcome .heading {
+      font-size: 35px;
+    }
+  }

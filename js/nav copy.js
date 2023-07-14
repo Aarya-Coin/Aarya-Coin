@@ -17,8 +17,6 @@ window.addEventListener("load", ()=>{
     }
 });
 
-
-//code for adding active class to the nav links
 const navLinks = document.querySelectorAll('.nav .links span');
 
 const sectionObserver = new IntersectionObserver(entries => {
@@ -69,3 +67,10 @@ navLinks.forEach(link => {
     this.parentNode.classList.add('active');
   });
 });
+
+
+
+
+
+
+

@@ -2305,7 +2305,7 @@ flex-direction: column;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     animation-timing-function: linear;
-    background-position-y: 63%;
+    background-position-y: 53%;
     /* display: grid;
     place-items: center;
     justify-content: center; */
@@ -2330,7 +2330,7 @@ flex-direction: column;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding-top: 2rem;
+    padding-top: 1.8rem;
     z-index: 3;
   }
   
@@ -2371,7 +2371,7 @@ flex-direction: column;
   position: relative;
   z-index: 3;
   /* margin-top: -18rem; */
-  margin-bottom: 11%;
+  margin-bottom: 25%;
   }
   
   .hero-img{

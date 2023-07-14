@@ -2,7 +2,7 @@ var welcomeWrapper = document.querySelector('.welcome-wrapper');
 
 document.addEventListener('DOMContentLoaded', () => {
  if(sessionStorage.getItem('welcomeScreen')=='true'){
-   welcomeWrapper.remove();
+  welcomeWrapper.remove();
  }else{
         sessionStorage.setItem('welcomeScreen', true);
         // Wrapper animation
@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 
-  }
+ }
 
   });  

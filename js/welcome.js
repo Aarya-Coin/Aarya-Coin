@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .add({
           delay: 5000,
           opacity: 0,
-          duration: 1000,
+          duration: 500,
         })
         .add({
           targets: ".welcome-wrapper",
           complete: function (anime) {
-           // welcomeWrapper.remove();
+            welcomeWrapper.remove();
           }
         });
       

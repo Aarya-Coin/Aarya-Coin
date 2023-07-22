@@ -106,3 +106,8 @@
       font-size: 35px;
     }
   }
+  @media (max-width:376) {
+    .welcome .heading {
+      font-size: 30px;
+    }
+  }

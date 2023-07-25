@@ -1,71 +1,52 @@
-window.addEventListener("load", ()=>{
-    // code for hamburger menu
-    const toggleBtn = document.querySelector('.toggle_btn')
-    const toggleBtnIcon = document.querySelector('.toggle_btn img')
-    const linksBg = document.querySelector('.links-bg')
-    const linksContainer = document.querySelector('.links')
-    
-    toggleBtn.onclick = function (){
-     linksBg.classList.toggle('open');
-    
-     const isOpen = linksBg.classList.contains('open');
-     linksContainer.classList.toggle('linksPos');
-    
-     toggleBtnIcon.src = isOpen
-      ? 'images/close.svg'
-      : 'images/menu.svg'
-    }
-});
+// Wrap all your code in a single DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', () => {
 
+  // Hamburger menu code
+  const toggleBtn = document.querySelector('.toggle_btn');
+  const toggleBtnIcon = document.querySelector('.toggle_btn img');
+  const linksBg = document.querySelector('.links-bg');
+  const linksContainer = document.querySelector('.links');
 
-//code for adding active class to the nav links
-const navLinks = document.querySelectorAll('.nav .links span');
+  toggleBtn.onclick = function () {
+    linksBg.classList.toggle('open');
+    linksContainer.classList.toggle('linksPos');
+    const isOpen = linksBg.classList.contains('open');
+    toggleBtnIcon.src = isOpen ? 'images/close.svg' : 'images/menu.svg';
+  }
 
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    let sectionId = entry.target.getAttribute('id');
-    const link = document.querySelector(`.nav .links span a[href="#${sectionId}"]`);
+  // Function to add or remove the "active" class based on intersection
+  const handleIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+      const targetLink = Array.from(navLinks).find(
+        (link) => link.querySelector('a').getAttribute('href') === `#${entry.target.id}`
+      );
 
-    if (link) {
-      const parent = link.parentNode;
-
-      if (sectionId === 'home') {
-        parent.classList.remove('active');
-      } else if (entry.isIntersecting) {
-        parent.classList.add('active');
+      if (entry.isIntersecting) {
+        targetLink.classList.add('active');
       } else {
-        parent.classList.remove('active');
+        targetLink.classList.remove('active');
       }
+    });
+  };
+
+  // Intersection Observer configuration
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px', // No margin added to the root
+    threshold: 0.5, // At least 50% of the target should be visible to trigger the intersection
+  };
+
+  // Create an instance of the Intersection Observer
+  const observer = new IntersectionObserver(handleIntersect, options);
+
+  // Observe the sections you want to track (with the corresponding IDs)
+  const sectionsToTrack = ['about', 'usecase', 'roadmap', 'faq'];
+  const navLinks = document.querySelectorAll('.links span');
+
+  sectionsToTrack.forEach((sectionId) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      observer.observe(targetSection);
     }
-  });
-}, {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5
-});
-
-document.querySelectorAll('section').forEach(section => {
-  sectionObserver.observe(section);
-});
-
-// Additional handling for initial active link
-const firstSectionId = document.querySelector('section').getAttribute('id');
-const firstLink = document.querySelector(`.nav .links span a[href="#${firstSectionId}"]`);
-if (firstLink) {
-  const firstLinkParent = firstLink.parentNode;
-  firstLinkParent.classList.add('active');
-}
-
-// Get all the navigation links
-// const navLinks = document.querySelectorAll('.nav .links span');
-
-// Add a click event listener to each navigation link
-navLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    // Remove the "active" class from all navigation links
-    navLinks.forEach(link => link.parentNode.classList.remove('active'));
-
-    // Add the "active" class to the clicked navigation link's parent
-    this.parentNode.classList.add('active');
   });
 });

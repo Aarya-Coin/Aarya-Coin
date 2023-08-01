@@ -1181,7 +1181,7 @@ svg#freepik_stories-bitcoin-p2p.animated #freepik--character-1--inject-30 {
   align-items: center;
   padding: 1rem 1rem 3rem;
   background-color: white;
-  background-image: url('https://img.freepik.com/free-vector/orange-water-color-background_1097-996.jpg?w=740&t=st=1686557448~exp=1686558048~hmac=5c79e45eccd166d9db34c5ebe44fd780c999293bb15f571370399ceb7892819d  ');
+  /* background-image: url('https://img.freepik.com/free-vector/orange-water-color-background_1097-996.jpg?w=740&t=st=1686557448~exp=1686558048~hmac=5c79e45eccd166d9db34c5ebe44fd780c999293bb15f571370399ceb7892819d'); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1206,6 +1206,21 @@ column-gap: 4rem;
   padding: 1rem;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: relative;
+  z-index: 0;
+}
+
+.ucCard::after{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #000000a2, #00000072);
+  z-index: -1;
+  border-radius: inherit;
 }
 
 .useCase h2 {
@@ -1216,12 +1231,12 @@ column-gap: 4rem;
 }
 
 #uc1{
-  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc1.webp");
+  /* background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc1.webp"); */
   background-size: cover;
   background-repeat: no-repeat;
 }
 #uc2{
-  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc2.webp");
+  /* background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc2.webp"); */
   color: white;
   background-size: cover;
   background-position-x: 50%;
@@ -1229,14 +1244,14 @@ column-gap: 4rem;
   background-repeat: no-repeat;
 }
 #uc3{
-  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc3.webp");
+  /* background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc3.webp"); */
   background-size: cover;
   background-position-x: 50%;
   /* background-position-y: 45%; */
   background-repeat: no-repeat;
 }
 #uc4{
-  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc4.webp");
+  /* background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc4.webp"); */
   color: rgb(255, 255, 255);
   background-size: cover;
   background-position-x: 50%;
@@ -1244,14 +1259,14 @@ column-gap: 4rem;
   /* background-repeat: no-repeat; */
 }
 #uc5{
-  background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc5.webp");
+  /* background-image: linear-gradient(to right, #000000a2, #00000072), url("../images/uc5.webp"); */
   color: black;
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #uc6{
-  background-image: linear-gradient(to right, #000000b7, #00000096), url("../images/uc6.webp");
+  /* background-image: linear-gradient(to right, #000000b7, #00000096), url("../images/uc6.webp"); */
   color: white;
   background-size: cover;
   background-position-x: 80%;
@@ -1522,10 +1537,24 @@ button.accordion.is-open {
 /*styling for the end elements section begins*/
 
 .endElements {
-  background-image: url('https://img.freepik.com/free-photo/abstract-background-fiery-flowing-lines_1048-9820.jpg?w=900&t=st=1684320721~exp=1684321321~hmac=66e47dbe3afae1ab17b78e8ad17a06da2ce62767eef972eddb7b214c733b48e6');
-  background-image: linear-gradient(to right, #00000081, #00000072), url("https://img.freepik.com/free-vector/background-with-bright-golden-stripes_1017-7097.jpg?w=740&t=st=1684321517~exp=1684322117~hmac=85d171119f50c9de9e9ae8e3d7ebb719a9e595f21d6557a417467b1f9aaa1c93");
+  /* background-image: url('https://img.freepik.com/free-photo/abstract-background-fiery-flowing-lines_1048-9820.jpg?w=900&t=st=1684320721~exp=1684321321~hmac=66e47dbe3afae1ab17b78e8ad17a06da2ce62767eef972eddb7b214c733b48e6');
+  background-image: linear-gradient(to right, #00000081, #00000072), url("https://img.freepik.com/free-vector/background-with-bright-golden-stripes_1017-7097.jpg?w=740&t=st=1684321517~exp=1684322117~hmac=85d171119f50c9de9e9ae8e3d7ebb719a9e595f21d6557a417467b1f9aaa1c93"); */
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.endElements::after{
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+display: inline-block;
+height: 100%;
+width: 100%;
+background-image: linear-gradient(to right, #00000054, #0000003f);
+z-index: -1;
 }
 
 /*styling for the end elements section ends*/

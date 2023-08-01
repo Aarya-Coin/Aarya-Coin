@@ -200,30 +200,30 @@
           </div>
     </section>
     <section id="usecase" style="position: absolute;"></section>
-    <section class="useCase">
+    <section class="useCase lozad" data-background-image="images/useCase-bg.webp">
         <h2>Use Cases</h2> 
         <div class="ucWrapper">
-        <div class="ucCard" id="uc1">
+        <div class="ucCard lozad" id="uc1" data-background-image="images/uc1.webp">
            <p>Aarya is offers long-term investment opportunities and is the perfect platform for those seeking an organic crypto token.</p>
         </div>  
-        <div class="ucCard" id="uc2">
+        <div class="ucCard lozad" id="uc2" data-background-image="images/uc2.webp">
             <p>Aarya can be used as a secure and fast payment method by businesses and individuals, allowing for quick and efficient transactions.</p>
          </div> 
-         <div class="ucCard" id="uc3">
+         <div class="ucCard lozad" id="uc3" data-background-image="images/uc3.webp">
             <p> Aarya is going to launch its exclusive NFT collection which can be bought with ARY and will help in community building</p>
          </div> 
-         <div class="ucCard" id="uc4">
+         <div class="ucCard lozad" id="uc4" data-background-image="images/uc4.webp">
             <p>Aarya can facilitate cross-border transactions, providing a fast and secure payment method that is not subject to traditional banking regulations.</p>
          </div> 
-         <div class="ucCard" id="uc5">
+         <div class="ucCard lozad" id="uc5" data-background-image="images/uc5.webp">
             <p>Aarya can be used for micropayments, allowing for the transfer of small amounts of value with low transaction fees.</p>
          </div> 
-         <div class="ucCard" id="uc6">
+         <div class="ucCard lozad" id="uc6" data-background-image="images/uc6.webp">
             <p>Aarya allocates a portion of its revenue to various charitable groups. Share your charity impact story with Aarya, and receive a friendly reward as a token of appreciation.</p>
          </div> 
          </div>
     </section>
-    <section class="endElements">
+    <section class="endElements lozad" data-background-image="images/endElements.avif">
     <section class="featuresWrapper">
         <h2>Features</h2>
         <div class="featuresContainer">
@@ -722,39 +722,42 @@ function toTrade() {
     <!-- <script src="js/roadmap.js"></script> -->
     <script src="js/addToken.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- <script>
-        window.onload = function() {
+    <script>
+      window.onload = function() {
+        // Delay the loading of Swiper library by 2 seconds
+        setTimeout(function() {
           var script = document.createElement('script');
           script.src = 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js';
           script.onload = function() {
             // Swiper library has finished loading
             // Now you can use the Swiper object
-            var swiper = new Swiper('.swiper-container', {
-              // Swiper configuration options
-            });
+            setTimeout(function() {
+              var swiper = new Swiper(".swiper-container", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 1,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 2,
+                  slideShadows: true,
+                },
+                breakpoints:{
+                  1025:{
+                      slidesPerView: 1,
+                  }
+                },
+              });
+            }, 1000); // Add a 1-second delay before initializing the Swiper
           };
           document.body.appendChild(script);
-        };
-      </script> -->
+        }, 2000); // Add a 2-second delay before loading the Swiper library
+      };
+    </script>
+    
     <script>
-        var swiper = new Swiper(".swiper-container", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 1,
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows: true,
-      },
-      breakpoints:{
-        1025:{
-            slidesPerView: 1,
-        }
-      },
-    });
     </script>
 
 </body>

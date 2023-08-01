@@ -451,8 +451,8 @@ margin-bottom: 30%;
   background-image: linear-gradient(to right, #00000087, #00000036), url("/images/trails.jpg");
   background-image: linear-gradient(to right, #00000087, #00000036), url("https://w0.peakpx.com/wallpaper/214/1022/HD-wallpaper-abstract-dark-abstract-dark.jpg");
   background-image: linear-gradient(to right, #0000005b, #00000036), url("https://static.vecteezy.com/system/resources/previews/010/705/558/non_2x/orange-modern-abstract-background-for-banner-landing-page-poster-presentation-or-flyer-free-vector.jpg");
-  background-image: url("https://static.vecteezy.com/system/resources/previews/010/705/558/non_2x/orange-modern-abstract-background-for-banner-landing-page-poster-presentation-or-flyer-free-vector.jpg");
-  background-image: url("../images/c-bg.png");
+  /* background-image: url("https://static.vecteezy.com/system/resources/previews/010/705/558/non_2x/orange-modern-abstract-background-for-banner-landing-page-poster-presentation-or-flyer-free-vector.jpg");
+  background-image: url("../images/c-bg.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 45%;

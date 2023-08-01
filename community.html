@@ -174,11 +174,11 @@
         </div>
       </div>
       <div class="hero-img">
-        <img data-src="images/hero-1.jpg" alt="" class="lozad">
+        <img data-src="images/hero-1.webp" alt="" class="lozad">
       </div>
       <!-- <img class="parallax lozad" data-src="https://images.pexels.com/photos/1679719/pexels-photo-1679719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""> -->
     </section>
-    <section class="introText lozad" id="about">
+    <section class="introText lozad" id="about" data-background-image="images/c-bg.webp">
       <h2>Not Just a Crypto!</h2>
       <p>
         Aarya is more than just a crypto token. It's a movement driven by a greater purpose. Our mission is to serve the
@@ -187,7 +187,8 @@
         for good.</p>
     </section>
     <section class="bondedSection lozad"
-      data-background-image="https://marketplace.canva.com/HwC3c/MAErSwHwC3c/1/s2/canva-tiny-white-dust-particles-on-black-background-MAErSwHwC3c.jpg">
+      data-background-image="images/bondedSection-bg.webp">
+      <!-- https://marketplace.canva.com/HwC3c/MAErSwHwC3c/1/s2/canva-tiny-white-dust-particles-on-black-background-MAErSwHwC3c.jpg -->
       <!-- https://w0.peakpx.com/wallpaper/340/862/HD-wallpaper-windows-11-darker-microsoft-opera-windows-11-windows-computer-stock-microsoft.jpg -->
       <section class="our-work">
         <div class="work-text-wrapper">
@@ -389,9 +390,9 @@ swiperContainer.addEventListener('touchend', function () {
     // Function to change the image source
     function changeImageSource() {
       if (window.innerWidth < 426) {
-        imgElement.setAttribute('src', 'images/hero-1.jpg');
+        imgElement.setAttribute('src', 'images/hero-1.webp');
       } else {
-        imgElement.setAttribute('src', 'images/hero-bg.jpg');
+        imgElement.setAttribute('src', 'images/hero-bg.webp');
       }
     }
 

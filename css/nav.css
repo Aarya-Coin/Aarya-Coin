@@ -24,6 +24,11 @@
   z-index: -1;
 }
 
+.nav .logo{
+  display: inline-flex;
+    margin-top: -1rem;
+}
+
 .nav .logo a {
   font-family: 'Blanka', sans-serif;
   text-decoration: none;
@@ -145,8 +150,13 @@
     font-size: 1.7rem;
   }
 
+  .nav .logo{
+    /* display: inline-flex; */
+      margin-top: 0rem;
+  }
+
   .nav .logo a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 1rem;
     margin-top: -1rem;
   }

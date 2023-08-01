@@ -21,7 +21,7 @@
     <script defer src="js/welcome.js"></script>
     <link rel="stylesheet" href="css/welcome.min.css">
     <link rel="stylesheet" href="css/nav.min.css">
-    <link rel="stylesheet" href="css/style.min.css" async>
+    <link rel="stylesheet" href="css/style.min.css">
     <!-- <link rel="preload" href="css/style.min.css" as="style"> -->
     <link rel="stylesheet" href="css/featuresCard.min.css">
     <link rel="preload" fetchpriority="high" as="image" href="images/transparent1/11.webp" type="image/webp">
@@ -656,50 +656,37 @@ function toTrade() {
     </script> -->
 
             <!-- intersection observer js for changing navbar styling once crossed the section -->
-    <script>
-
-        const navbar = document.querySelector(".nav");
-        const heroSection = document.querySelector(".hero");
-
-        if (screen.width > 767) {
-            var heroSectionOptions = {
-            rootMargin: "-100px 0px 0px 0px",
-            };
-        }
-
-        else {
-            var heroSectionOptions = {
-            rootMargin: "-50px 0px 0px 0px",
-            };
-        }
-        const heroSectionObserver =
-            new IntersectionObserver(function (entries, navbar) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                // Navbar styling when the page is scrolled
-                $(".nav .nav-bg").css("background-color", "#000000a8");
-                $('.nav').css("transition", "0.3s ease-in-out");
-                $('.nav .nav-bg').css("backdrop-filter", "blur(3px)");
-                $('.nav .logo a').css("color", "#fff");
-                $('.nav .links span a').css("color", "#b7b7b7");
-
-
-                }
-                else {
-                // Navbar styling when it is back on hero section   
-                $(".nav .nav-bg").css("background-color", "transparent");
-                $('.nav').css("transition", "0.3s ease-in-out");
-                $('.nav .nav-bg').css("backdrop-filter", "blur(0px)");
-                $('.nav .logo a').css("color", "#d8b55b");
-                $('.nav .links span a').css("color", "silver");
-                }
-
-            })
-            }, heroSectionOptions);
-
-        heroSectionObserver.observe(heroSection);
-
-    </script>
+            <script>
+              const navbar = document.querySelector(".nav");
+              const heroSection = document.querySelector(".hero");
+              const navBg = document.querySelector(".nav .nav-bg");
+              const navLinks = document.querySelectorAll(".nav .links span a");
+              const navLogoLink = document.querySelector(".nav .logo a");
+            
+              const heroSectionOptions = screen.width > 767 ? { rootMargin: "-100px 0px 0px 0px" } : { rootMargin: "-50px 0px 0px 0px" };
+              const heroSectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (!entry.isIntersecting) {
+                    // Navbar styling when the page is scrolled
+                    navBg.style.backgroundColor = "#000000a8";
+                    navbar.style.transition = "0.3s ease-in-out";
+                    navBg.style.backdropFilter = "blur(3px)";
+                    navLogoLink.style.color = "#fff";
+                    navLinks.forEach((link) => (link.style.color = "#b7b7b7"));
+                  } else {
+                    // Navbar styling when it is back on the hero section
+                    navBg.style.backgroundColor = "transparent";
+                    navbar.style.transition = "0.3s ease-in-out";
+                    navBg.style.backdropFilter = "blur(0px)";
+                    navLogoLink.style.color = "#d8b55b";
+                    navLinks.forEach((link) => (link.style.color = "silver"));
+                  }
+                });
+              }, heroSectionOptions);
+            
+              heroSectionObserver.observe(heroSection);
+            </script>
+            
 
     <script>
         // Get current year
@@ -718,7 +705,6 @@ function toTrade() {
     </script>
 
     <!-- <script src="js/navbar.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
    
     <!-- <script src="js/roadmap.js"></script> -->
     <script src="js/addToken.js"></script>

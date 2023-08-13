@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Loader animation
         anime({
           targets: ".loader",
-          delay: 2000,
+          delay: 1000,
           duration: 3000,
           width: ["0", "100%"],
           easing: "easeOutExpo",

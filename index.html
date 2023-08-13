@@ -710,7 +710,7 @@ function toTrade() {
     <!-- <script src="js/roadmap.js"></script> -->
     <script src="js/addToken.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
+    <!-- <script>
       window.onload = function() {
         // Delay the loading of Swiper library by 2 seconds
         setTimeout(function() {
@@ -743,10 +743,71 @@ function toTrade() {
           document.body.appendChild(script);
         }, 2000); // Add a 2-second delay before loading the Swiper library
       };
-    </script>
-    
-    <script>
-    </script>
+    </script> -->
+            <script>
+              // const useCaseContainer = document.getElementById("usecase");
+              const useCaseContainer = document.querySelector("#usecase");
+          
+              const swiperObserver = new IntersectionObserver((entries) => {
+                  entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                          // Load Glide.js script
+                          const swiperScript = document.createElement('script');
+                          swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js';
+                          swiperScript.onload = () => {
+                              // Initialize Glide.js after script is loaded
+                              setTimeout(() => {
+                                  
+                                var swiper = new Swiper(".swiper-container", {
+                                    effect: "coverflow",
+                                    grabCursor: true,
+                                    centeredSlides: true,
+                                    slidesPerView: 1,
+                                    coverflowEffect: {
+                                      rotate: 0,
+                                      stretch: 0,
+                                      depth: 100,
+                                      modifier: 2,
+                                      slideShadows: true,
+                                    },
+                                    breakpoints:{
+                                      1025:{
+                                          slidesPerView: 1,
+                                      }
+                                    },
+                                  });          
+                                  
+                              }, 800); // Adjust the delay as needed
+                          };
+          
+                          document.body.appendChild(swiperScript);
+                      }
+                  });
+              });
+          
+              // Start observing the skills container
+              swiperObserver.observe(useCaseContainer);
+          </script>
+
+<script>
+  function loadStylesheet(href) {
+    var stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = href;
+    document.head.appendChild(stylesheet);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Load the first stylesheet
+    loadStylesheet('css/style.min.css');
+
+    // Load the second stylesheet after a delay (e.g., 1000ms or 1 second)
+    setTimeout(function() {
+      loadStylesheet('css/nav.min.css');
+    }, 1000);
+  });
+</script>
+
 
 </body>
 

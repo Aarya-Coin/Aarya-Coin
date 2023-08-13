@@ -95,7 +95,7 @@
   
   .loader {
     height: 4px;
-    width: 150px;
+    width: 0px;
     background: #fff;
     border-radius: 100px;
     background: #d8b55b;

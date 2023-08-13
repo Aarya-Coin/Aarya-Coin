@@ -999,12 +999,13 @@ column-gap: 4rem;
 button.accordion {
   width: 100%;
   background-color: #ff5e00;
+  background-color: #181818;
   border: none;
   outline: none;
   text-align: left;
   padding: 15px 20px;
   font-size: 18px;
-  color: #ebebeb;
+  color: #d8b55b;
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
@@ -1024,12 +1025,13 @@ button.accordion.is-open:after {
 button.accordion:hover,
 button.accordion.is-open {
   background-color: #ff5e00d4;
+  background-color: #181818d4;
 }
 
 .accordion-content {
   background-color: #2b2b2b;
-  border-left: 1px solid #ff5e00d4;
-  border-right: 1px solid #ff5e00d4;
+  border-left: 1px solid #181818d4;
+  border-right: 1px solid #181818d4;
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;
@@ -1037,7 +1039,7 @@ button.accordion.is-open {
 }
 
 .accordion-content:last-child {
-  border-bottom: 1px solid #ff5e00d4;
+  border-bottom: 1px solid #181818d4;
 }
 
 .accordion-content p {
@@ -1045,6 +1047,10 @@ button.accordion.is-open {
   font-weight: lighter;
   padding: 1rem;
   word-break: break-word;
+}
+
+.accordion-content a{
+  color: #d8b55b;
 }
 
 /*styling for faq section ends*/

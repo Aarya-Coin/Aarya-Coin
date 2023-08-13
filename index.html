@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" /> -->
+    <meta http-equiv="Expires" content="0" />
     <meta name="keywords" content="Aarya network, Aarya(ARY), ARY, Aarya, Project Aarya, Crypto, ERC20, PLG20, Aarya network Polygon, Aarya Polygon, DeFi decentralized payment system, secure transactions, fast payments, low-cost payments, Saurashtra region, Gujarat, India, blockchain technology, cryptocurrency, financial solutions">
     <meta name="description" content="Aarya is a decentralized payment system designed to provide secure, fast, and low-cost transactions.  Experience the future of payments with Aarya.">
     <meta name="robots" content="index, follow">
@@ -28,7 +28,7 @@
     <!-- <link rel="preload" href="css/style.css" as="style"> -->
     <!-- <link rel="stylesheet" href="css/featuresCard.min.css"> -->
     <link rel = "preload" href = "css/featuresCard.min.css" type = "text/css" as = "style" onload = "this.onload = null; this.rel = 'stylesheet' ; "/>
-    <link rel="preload" fetchpriority="high" as="image" href="images/transparent1/11.webp" type="image/webp">
+    <!-- <link rel="preload" fetchpriority="high" as="image" href="images/transparent1/11.webp" type="image/webp"> -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <script src="https://kit.fontawesome.com/a81f64a541.js" crossorigin="anonymous" defer></script>
     <style>
@@ -43,15 +43,7 @@ html {scroll-behavior: smooth;}@font-face{font-family:Blanka;src:url('https://aa
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     /> -->
 </head>
-<!-- Google tag (gtag.js) -->
-  <!-- <script src="https://www.googletagmanager.com/gtag/js?id=G-B491L0Y23W" defer></script>
-<script defer>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-B491L0Y23W');
-</script> -->
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -184,7 +176,7 @@ html {scroll-behavior: smooth;}@font-face{font-family:Blanka;src:url('https://aa
         }</style>
 
       <div class="coin">
-        <img class="lozad" data-src="images/transparent1/11.webp" alt="Aarya Logo">
+        <img class="lozad" src="images/transparent1/11.webp" alt="Aarya Logo">
       </div>
         </section>
 
@@ -706,6 +698,24 @@ function toTrade() {
               // Start observing the skills container
               swiperObserver.observe(useCaseContainer);
 </script>
+<script>
+  function analyticsOnScroll() {
+      var head = document.getElementsByTagName('head')[0]
+      var script = document.createElement('script')
+      script.type = 'text/javascript';
+      script.attribute='async';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B491L0Y23W'
+      head.appendChild(script);
+      document.removeEventListener('scroll', analyticsOnScroll);
+  };
+  document.addEventListener('scroll', analyticsOnScroll);
+</script>
+<script defer>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-B491L0Y23W');
+</script> 
 </body>
 </html>

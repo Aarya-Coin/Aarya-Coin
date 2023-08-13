@@ -92,12 +92,6 @@ button {
 /*styling for hero section starts*/
 
 .hero {
-  /* background-image: linear-gradient(to top, #ff6300, #fd6d20, #fa7633, #f77f43, #f38853);
-    background-image: linear-gradient(to top, #ff5c00, #fb6315, #f76923, #f26f2f, #ee7539); */
-  /* background-image: none;
-    background-color: #ff6300; */
-  /* background-image: url('https://wallpapers.com/images/hd/orange-circle-with-flare-kuzmb7ugwgttn11y.jpg'); */
-  /* background-image: url("https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -119,33 +113,10 @@ button {
   object-fit: cover;
 }
 
-.hvideos {
-  height: 100vh;
-}
-
-.hvideos .bg-video {
-  object-fit: cover;
-  height: 100vh;
-  width: 50vw;
-}
-
 #hero-video2 {
   height: 100vh !important;
   width: 100% !important;
   object-fit: cover !important;
-}
-
-
-.htextContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  /* flex-direction: column; */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-53%);
 }
 
 @font-face {
@@ -852,7 +823,7 @@ column-gap: 4rem;
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  /* height: 300px; */
   filter: blur(3px);
 }
 

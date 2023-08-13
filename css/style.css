@@ -122,11 +122,13 @@ button {
 @font-face {
   font-family: Blanka;
   src: url(../fonts/Blanka-Regular.otf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Archive;
   src: url(../fonts/Archive.otf);
+  font-display: swap;
 }
 
 

@@ -22,7 +22,7 @@
     <!-- <link rel="stylesheet" href="css/welcome.min.css"> -->
     <!-- <link rel="stylesheet" href="css/nav.min.css"> -->
     <link rel = "preload" href = "css/nav.min.css" type = "text/css" as = "style" onload = "this.onload = null; this.rel = 'stylesheet' ; "/>
-    <link rel = "preload" href = "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" type = "text/css" as = "style" onload = "this.onload = null; this.rel = 'stylesheet' ; "/>
+    <!-- <link rel = "preload" href = "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" type = "text/css" as = "style" onload = "this.onload = null; this.rel = 'stylesheet' ; "/> -->
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <link rel = "preload" href = "css/style.min.css" type = "text/css" as = "style" onload = "this.onload = null; this.rel = 'stylesheet' ; "/>
     <!-- <link rel="preload" href="css/style.css" as="style"> -->
@@ -682,6 +682,7 @@ function toTrade() {
                                       }
                                     },
                                   });          
+                                  console.log("Swiper JS Loaded")
                                   
                               }, 800); // Adjust the delay as needed
                           };
@@ -694,6 +695,28 @@ function toTrade() {
               // Start observing the skills container
               swiperObserver.observe(useCaseContainer);
 </script>
+<script>
+  const swiperCssContainer = document.querySelector('#usecase');
+
+  const swiperCssObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Load the CSS file when the container is in view
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css';
+        document.head.appendChild(link);
+
+        console.log("Swiper CSS loaded")
+        // Stop observing once loaded
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  swiperCssObserver.observe(swiperCssContainer);
+</script>
+
 <script>
   function analyticsOnScroll() {
       var head = document.getElementsByTagName('head')[0]

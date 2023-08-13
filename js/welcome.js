@@ -1,9 +1,9 @@
 var welcomeWrapper = document.querySelector('.welcome-wrapper');
 
 document.addEventListener('DOMContentLoaded', () => {
-//  if(sessionStorage.getItem('welcomeScreen')=='true'){
-//    welcomeWrapper.remove();
-//  }else{
+ if(sessionStorage.getItem('welcomeScreen')=='true'){
+   welcomeWrapper.remove();
+ }else{
         sessionStorage.setItem('welcomeScreen', true);
         // Wrapper animation
         anime.timeline({
@@ -54,6 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
               });
 
 
-  // }
+  }
 
   });  

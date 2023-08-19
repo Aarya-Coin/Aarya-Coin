@@ -134,8 +134,9 @@
 <body>
     <nav class="nav">
         <div class="nav-bg"></div>
-        <div class="logo"><a href="#"><h1 id="mheading">AARYA</h1></a></div>
-        <div class="links">
+        <!-- <div class="half-wrapper"> -->
+          <div class="logo"><a href="#"><h1 id="mheading">AARYA</h1></a></div>
+          <div class="links">
             
             <span><a href="community">#Community</a></span>
             <span><a href="#about">About</a></span>
@@ -145,6 +146,8 @@
             <!-- <span id="side-link"><a href="community.html">Community</a></span> -->
             <div class="animation start-home"></div>
         </div>
+        <!-- </div> -->
+
         <div class="links-bg"></div>
         <div class="toggle_btn">
             <img src="images/menu.svg" style="height: 35px;width:35px;" alt="mobile menu">
@@ -161,6 +164,12 @@
         </div>
         
         <style>
+          #v1{
+            filter: contrast(140%);
+          }
+          #v2{
+            filter: contrast(180%);
+          }
         .hvideos{
           background-size: cover; background-repeat: no-repeat;height: 100vh;    width: 50vw;
         }
@@ -337,61 +346,189 @@
               </div>
         </div>
     </section>
+    
     <section class="section-rmap" id="roadmap">
-        <h3 class="main-title">Roadmap</h3>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-              <div class="swiper-slide rSlide">
-                <div class="slide-container">
-                    <h2 class="slide-Title">Phase 1</h2>
-                    <div class="slide-description">
-                      <ul>
-                        <li>Complete smart contract development,
-                            testing, and auditing.
-                            </li>
-                        <li>Launch Aarya(ARY) on Polygon blockchain.
-                        </li>
-                        <li>Create dedicated website and social media
-                            for promotion</li>
-                        <li>Develop partnerships with exchanges,
-                            wallets, and platforms. </li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide rSlide">
-                <div class="slide-container">
-                    <h2 class="slide-Title">Phase 2</h2>
-                    <div class="slide-description">
-                      <ul>
-                        <li>Expand Aarya's adoption in diverse sectors</li>
-                        <li>Improve Aarya on the basis of feedback and market demand </li>
-                        <li>Regularly update and improve Aarya Coin
-                            ecosystem based on feedback and market
-                            demand.</li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide rSlide">
-                <div class="slide-container">
-                    <h2 class="slide-Title">Phase 3</h2>
-                    <div class="slide-description">
-                      <ul>
-                        <li>Expand use cases & adoption in industries/sectors.
-                        </li>
-                        <li>Implemention of ZKP for enhanced privacy</li>
-                        <li>Establish strategic partnerships for utility &
-                            acceptance.
-                            </li>
-                        <li>Launching Aarya exclusive NFTs </li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
+      <div class="phase-container">
+        <button class="phase-button">
+          <span><h3>Phase 1</h3></span>
+        </button>
+        <div class="phase-info">
+          <ul>
+            <li>Complete smart contract development, testing, and auditing.</li>
+            <li>Launch Aarya(ARY) on Polygon blockchain.</li>
+            <li>Create dedicated website and social media for promotion</li>
+            <li>Develop partnerships with exchanges, wallets, and platforms.</li>
+          </ul>
         </div>
-    </div>
-  </section>
+      </div>
+      <div class="phase-container">
+        <button class="phase-button">
+          <span><h3>Phase 2</h3></span>
+        </button>
+        <div class="phase-info">
+          <ul>
+            <li>Expand Aarya's adoption in diverse sectors</li>
+            <li>Improve Aarya on the basis of feedback and market demand </li>
+            <li>Regularly update and improve Aarya Coin
+                ecosystem based on feedback and market
+                demand.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-container">
+        <button class="phase-button">
+          <span><h3>Phase 3</h3></span>
+        </button>
+        <div class="phase-info">
+          <ul>
+            <li>Expand use cases & adoption in industries/sectors.
+            </li>
+            <li>Implemention of ZKP for enhanced privacy</li>
+            <li>Establish strategic partnerships for utility &
+                acceptance.
+                </li>
+            <li>Launching Aarya exclusive NFTs </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="overlay"></div>
+<style>
+  .section-rmap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+  }
+  .phase-container {
+  position: relative;
+}
+
+.phase-info {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.406);
+  padding: 10px 30px;
+  box-shadow: 0px 30px 150px 3px rgba(0, 0, 0, 0.382);
+  z-index: 2;
+  color: white;
+  /* outline-offset:  5px; */
+  outline: 2px solid #d8b55bbb;
+  backdrop-filter: blur(10px);
+  /* width: 100%; */
+  /* opacity: 0; */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.phase-container button {
+  background: #181818;
+  color: #d8b55b;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+.phase-container button span {
+  display: inline-block;
+  transform: skew(21deg);
+  color: #d8b55b;
+}
+
+.phase-container button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  color: rgb(20, 20, 20);
+  background: #d8b55b;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.phase-container button:hover span{
+  color: #000000;
+}
+
+.phase-container button:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.phase-container button:hover + .phase-info  {
+display: block;
+/* opacity: 1; */
+transition-delay: 1s;
+transition: 0.5s ease-in-out;
+}
+.phase-container button:hover + .phase-info  {
+display: block;
+/* opacity: 1; */
+transition-delay: 1s;
+transition: 0.5s ease-in-out;
+}
+.phase-container button + .phase-info:hover  {
+/* transition-delay: 1s; */
+transition: 0.5s ease-in-out;
+/* opacity: 1; */
+display: block;
+}
+
+@media(max-width:426px){
+  .section-rmap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: column;
+  }
+}
+</style> 
+<script>
+  const phaseButtons = document.querySelectorAll('.phase-button');
+  const phaseInfos = document.querySelectorAll('.phase-info');
+  const overlay = document.querySelector('.overlay');
+  
+  phaseButtons.forEach((phaseButton, index) => {
+    phaseButton.addEventListener('click', () => {
+      phaseInfos.forEach((phaseInfo) => {
+        phaseInfo.style.display = 'none';
+      });
+      phaseInfos[index].style.display = 'block';
+      overlay.style.display = 'block';
+    });
+  });
+  
+  overlay.addEventListener('click', () => {
+    phaseInfos.forEach((phaseInfo) => {
+      phaseInfo.style.display = 'none';
+    });
+    overlay.style.display = 'none';
+  });
+  </script>
+  
 
     <div class=callToAction>
         <div class=growthImg>
@@ -650,7 +787,7 @@ function toTrade() {
     </script>
     <script src="js/addToken.js" async defer></script>
            
-<script>
+<!-- <script>
               // const useCaseContainer = document.getElementById("usecase");
               const useCaseContainer = document.querySelector("#usecase");
           
@@ -715,7 +852,7 @@ function toTrade() {
   });
 
   swiperCssObserver.observe(swiperCssContainer);
-</script>
+</script> -->
 
 <script>
   function analyticsOnScroll() {

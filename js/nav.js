@@ -46,19 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBg = navbar.querySelector('.nav-bg');
   const navLinks1 = navbar.querySelectorAll('.links span a');
   const navLogoLink = navbar.querySelector('.logo a');
+  const part2Links = navbar.querySelector('.links#part2');
 
-  const heroSectionOptions = { rootMargin: screen.width > 767 ? '-100px 0px 0px 0px' : '-50px 0px 0px 0px' };
-  const heroSectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const isIntersecting = entry.isIntersecting;
+  const applyStylingOnScroll = () => {
+    const scrollPosition = window.scrollY;
+    const isIntersecting = scrollPosition <= 10; // Change this to your desired scroll amount
 
-      navBg.style.backgroundColor = isIntersecting ? 'transparent' : '#000000a8';
-      navBg.style.backdropFilter = isIntersecting ? 'blur(0px)' : 'blur(3px)';
-      navbar.style.transition = '0.3s ease-in-out';
-      navLogoLink.style.color = isIntersecting ? '#d8b55b' : '#fff';
-      navLinks1.forEach((link) => (link.style.color = isIntersecting ? 'silver' : '#b7b7b7'));
-    });
-  }, heroSectionOptions);
+    part2Links.style.opacity = isIntersecting ? 0 : 1;
+    navBg.style.backgroundColor = isIntersecting ? '#00000000' : '#000000a8';
+    navBg.style.backdropFilter = isIntersecting ? 'blur(3px)' : 'blur(3px)';
+    navbar.style.transition = '0.1s ease-in-out';
+    navLogoLink.style.color = isIntersecting ? '#d8b55b' : '#fff';
+    navLinks1.forEach((link) => (link.style.color = isIntersecting ? 'white' : '#b7b7b7'));
+  };
 
-  heroSectionObserver.observe(heroSection);
+  applyStylingOnScroll(); // Apply initial styling based on initial scroll position
+
+  // Listen for scroll events and update styling
+  window.addEventListener('scroll', applyStylingOnScroll);
 });

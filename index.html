@@ -76,8 +76,8 @@
           },{
             "@type": "ListItem", 
             "position": 4, 
-            "name": "Roadmap",
-            "item": "https://aarya.network/#usecase"  
+            "name": "Community",
+            "item": "https://aarya.network/community"  
           },{
             "@type": "ListItem", 
             "position": 5, 
@@ -351,192 +351,187 @@
               </div>
         </div>
     </section>
-    
-    <section class="section-rmap" id="roadmap">
-      <div class="phase-container">
-        <button class="phase-button">
-          <span><h3>Phase 1</h3></span>
-        </button>
-        <div class="phase-info">
-          <ul>
-            <li>Complete smart contract development, testing, and auditing.</li>
-            <li>Launch Aarya(ARY) on Polygon blockchain.</li>
-            <li>Create dedicated website and social media for promotion</li>
-            <li>Develop partnerships with exchanges, wallets, and platforms.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="phase-container">
-        <button class="phase-button">
-          <span><h3>Phase 2</h3></span>
-        </button>
-        <div class="phase-info">
-          <ul>
-            <li>Expand Aarya's adoption in diverse sectors</li>
-            <li>Improve Aarya on the basis of feedback and market demand </li>
-            <li>Regularly update and improve Aarya Coin
-                ecosystem based on feedback and market
-                demand.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="phase-container">
-        <button class="phase-button">
-          <span><h3>Phase 3</h3></span>
-        </button>
-        <div class="phase-info">
-          <ul>
-            <li>Expand use cases & adoption in industries/sectors.
+  
+
+<section class="section-rmap" id="roadmap">
+  <div class="phase-container">
+    <div class="buttons">
+      <button class="phase-button btn-hover color-3" data-phase="1">
+        Phase 1
+      </button>
+    </div>
+    <div class="phase-info" data-phase="1">
+      <ul>
+        <li>Complete smart contract development, testing, and auditing.</li>
+        <li>Launch Aarya(ARY) on Polygon blockchain.</li>
+        <li>Create dedicated website and social media for promotion</li>
+        <li>Develop partnerships with exchanges, wallets, and platforms.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="phase-container">
+    <div class="buttons">
+      <button class="phase-button btn-hover color-3" data-phase="2">
+        Phase 2
+      </button>
+    </div>
+    <div class="phase-info" data-phase="2">
+      <ul>
+        <li>Expand Aarya's adoption in diverse sectors</li>
+        <li>Improve Aarya on the basis of feedback and market demand </li>
+        <li>Regularly update and improve Aarya Coin
+            ecosystem based on feedback and market
+            demand.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="phase-container">
+    <div class="buttons">
+      <button class="phase-button btn-hover color-3" data-phase="3">
+        Phase 3
+      </button>
+    </div>
+    <div class="phase-info" data-phase="3">
+      <ul>
+        <li>Expand use cases & adoption in industries/sectors.
+        </li>
+        <li>Establish strategic partnerships for utility &
+            acceptance.
             </li>
-            <li>Implemention of ZKP for enhanced privacy</li>
-            <li>Establish strategic partnerships for utility &
-                acceptance.
-                </li>
-            <li>Launching Aarya exclusive NFTs </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div class="overlay"></div>
+      </ul>
+    </div>
+  </div>
+  <div class="phase-container">
+    <div class="buttons">
+      <button class="phase-button btn-hover color-3" data-phase="4">
+        Phase 4
+      </button>
+    </div>
+    <div class="phase-info" data-phase="4">
+      <ul>
+        <li>Implemention of ZKP for enhanced privacy</li>
+        <li>Launching Aarya exclusive NFTs </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="overlay"></div>
 <style>
-  .section-rmap{
+  .section-rmap {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3rem;
     flex-direction: row;
   }
+
   .phase-container {
-  position: relative;
-}
-
-.phase-info {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.406);
-  padding: 10px 30px;
-  box-shadow: 0px 30px 150px 3px rgba(0, 0, 0, 0.382);
-  z-index: 2;
-  color: white;
-  /* outline-offset:  5px; */
-  outline: 2px solid #d8b55bbb;
-  backdrop-filter: blur(10px);
-  /* width: 100%; */
-  /* opacity: 0; */
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.phase-container button {
-  background: #181818;
-  color: #d8b55b;
-  border: none;
-  padding: 10px 20px;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 600;
-  width: 120px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transform: skew(-21deg);
-}
-
-.phase-container button span {
-  display: inline-block;
-  transform: skew(21deg);
-  color: #d8b55b;
-}
-
-.phase-container button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 100%;
-  left: 0;
-  color: rgb(20, 20, 20);
-  background: #d8b55b;
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.5s;
-}
-
-.phase-container button:hover span{
-  color: #000000;
-}
-
-.phase-container button:hover::before {
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.phase-container button:hover + .phase-info  {
-display: block;
-/* opacity: 1; */
-transition-delay: 1s;
-transition: 0.5s ease-in-out;
-}
-.phase-container button:hover + .phase-info  {
-display: block;
-/* opacity: 1; */
-transition-delay: 1s;
-transition: 0.5s ease-in-out;
-}
-.phase-container button + .phase-info:hover  {
-/* transition-delay: 1s; */
-transition: 0.5s ease-in-out;
-/* opacity: 1; */
-display: block;
-}
-
-@media(max-width:426px){
-  .section-rmap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    flex-direction: column;
+    position: relative;
   }
-  .phase-info{
-    width: 80%;
+
+  .phase-info {
+    position: absolute;
+    width: 100%;
+    border: 2px solid #d8b55b;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 30px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    color: white;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* transform: translateY(20%); */
   }
-}
-</style> 
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .buttons {
+    /* margin: 10%; */
+    text-align: center;
+  }
+
+  .btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: background-position 0.4s ease-in-out;
+  }
+
+  .btn-hover:hover {
+    background-position: 100% 0;
+  }
+
+  .btn-hover:focus {
+    outline: none;
+  }
+
+  .btn-hover.color-3 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #ff7a2e, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+  }
+
+  /* .phase-container:hover .phase-info {
+    opacity: 1;
+    transform: translateY(5%);
+  } */
+
+  @media (max-width: 426px) {
+    .section-rmap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0rem;
+      flex-direction: column;
+    }
+    .phase-info {
+      width: 75vw;
+    }
+  }
+</style>
 <script>
   const phaseButtons = document.querySelectorAll('.phase-button');
   const phaseInfos = document.querySelectorAll('.phase-info');
-  const overlay = document.querySelector('.overlay');
-  
-  phaseButtons.forEach((phaseButton, index) => {
-    phaseButton.addEventListener('click', () => {
-      phaseInfos.forEach((phaseInfo) => {
-        phaseInfo.style.display = 'none';
+
+  phaseButtons.forEach((button) => {
+    button.addEventListener('mouseenter', () => {
+      const phase = button.getAttribute('data-phase');
+      phaseInfos.forEach((info) => {
+        info.style.opacity = '0';
+        info.style.transform = 'translateY(20%)';
       });
-      phaseInfos[index].style.display = 'block';
-      overlay.style.display = 'block';
+      const currentPhaseInfo = document.querySelector(`.phase-info[data-phase="${phase}"]`);
+      if (currentPhaseInfo) {
+        currentPhaseInfo.style.opacity = '1';
+        currentPhaseInfo.style.transform = 'translateY(2%)';
+      }
+    });
+
+    button.addEventListener('mouseleave', () => {
+      phaseInfos.forEach((info) => {
+        info.style.opacity = '0';
+        info.style.transform = 'translateY(20%)';
+      });
     });
   });
-  
-  overlay.addEventListener('click', () => {
-    phaseInfos.forEach((phaseInfo) => {
-      phaseInfo.style.display = 'none';
-    });
-    overlay.style.display = 'none';
-  });
-  </script>
-  
+</script>
 
     <div class=callToAction>
         <div class=growthImg>

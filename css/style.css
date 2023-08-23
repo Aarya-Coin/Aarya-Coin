@@ -812,7 +812,7 @@ column-gap: 4rem;
   flex-direction: column;
   width: 100%;
   min-height: 50vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 0rem 20rem;
 }
 

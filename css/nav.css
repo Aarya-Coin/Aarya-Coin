@@ -182,16 +182,25 @@
     transition: top 0.5s ease-in-out;
   }
 
-  .nav .links.linksPos {
+  .nav .links#part1.linksPos {
     top: 5.615rem;
     opacity: 1;
     transition: opacity 1s ease-in-out;
   }
+  .nav .links#part2{
+    visibility: hidden;
+  }
+  .nav .links#part2.linksPos2{
+    visibility: visible;
+    top: 9rem;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
 
-  .nav .links+.links-bg {
+  .nav .links-bg {
     position: absolute;
     top: 4rem;
-    height: 0;
+    height: 0px;
     width: 110vw;
     background-color: #000000a8;
     -webkit-backdrop-filter: blur(3px);
@@ -200,7 +209,11 @@
     transition: height 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  .nav .links+.links-bg.open {
+  .nav .links-bg.open {
     height: 320px;
   }
+
+  /* .nav .links-bg.open~.links#part2{
+    opacity: 1;
+  } */
 }

@@ -152,12 +152,6 @@
         <img src="images/menu.svg" style="height: 35px;width:35px;" alt="mobile menu">
     </div>
     </nav>
-    <style>
-
-      .hidden{
-        opacity: 0;
-      }
-    </style>
     <div class="main-container">
       <section class="hero" id="home">
         <div class="hvideos lozad" id="v1" data-background-image="images/hero-3.webp">
@@ -431,6 +425,8 @@
 
   .phase-info {
     position: absolute;
+    right: 50%;
+    transform: translate(50%,20%);
     width: 100%;
     border: 2px solid #d8b55b;
     background: rgba(0, 0, 0, 0.9);
@@ -440,7 +436,8 @@
     color: white;
     backdrop-filter: blur(10px);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    visibility: hidden;
+    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
     /* transform: translateY(20%); */
   }
 
@@ -515,19 +512,22 @@
       const phase = button.getAttribute('data-phase');
       phaseInfos.forEach((info) => {
         info.style.opacity = '0';
-        info.style.transform = 'translateY(20%)';
+        info.style.visibility = 'hidden';
+        info.style.transform = 'translate(50%,20%)';
       });
       const currentPhaseInfo = document.querySelector(`.phase-info[data-phase="${phase}"]`);
       if (currentPhaseInfo) {
         currentPhaseInfo.style.opacity = '1';
-        currentPhaseInfo.style.transform = 'translateY(2%)';
+        currentPhaseInfo.style.visibility = 'visible';
+        currentPhaseInfo.style.transform = 'translate(50%,2%)';
       }
     });
 
     button.addEventListener('mouseleave', () => {
       phaseInfos.forEach((info) => {
         info.style.opacity = '0';
-        info.style.transform = 'translateY(20%)';
+        info.style.visibility = 'hidden';
+        info.style.transform = 'translate(50%,20%)';
       });
     });
   });

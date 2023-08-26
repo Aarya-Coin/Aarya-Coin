@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleBtnIcon = toggleBtn.querySelector('img');
   const linksBg = document.querySelector('.links-bg');
   const linksContainer = document.querySelector('.links');
+  const linksPart2 = document.querySelector('.links#part2');
 
   toggleBtn.onclick = () => {
     linksBg.classList.toggle('open');
     linksContainer.classList.toggle('linksPos');
+    linksPart2.classList.toggle('linksPos2');
     const isOpen = linksBg.classList.contains('open');
     toggleBtnIcon.src = isOpen ? 'images/close.svg' : 'images/menu.svg';
   };

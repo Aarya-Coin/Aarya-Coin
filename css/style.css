@@ -926,10 +926,11 @@ column-gap: 4rem;
   /* position: absolute;
   left: 1rem; */
   display: grid;
+  row-gap: 20px;
   /* flex-direction: column;
   justify-content: space-evenly; */
   place-items: center;
-  margin-top: 50%;
+  margin-top: 10%;
 }
 
 .tpartner img{
@@ -1279,6 +1280,10 @@ grid-template-areas:  "faq"
 
   .partner{
     margin-top: 0%;
+  }
+
+  .partnerContainer{
+    margin-top: 16%;
   }
 
 }

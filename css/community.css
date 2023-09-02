@@ -445,12 +445,12 @@ margin-bottom: 30%;
   padding: 2rem;
   text-align: center;
   font-size: 2rem;
-  background-image: linear-gradient(to right, #000000a2, #00000072),url("https://images.pexels.com/photos/720254/pexels-photo-720254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  /* background-image: linear-gradient(to right, #000000a2, #00000072),url("https://images.pexels.com/photos/720254/pexels-photo-720254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-image: linear-gradient(to right, #000000a2, #00000072), url("https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?auto=compress&cs=tinysrgb&w=600");
   background-image: linear-gradient(to right, #00000087, #00000036), url("https://static.vecteezy.com/system/resources/previews/007/696/703/large_2x/abstract-circle-light-neon-effect-illustration-free-vector.jpg");
   background-image: linear-gradient(to right, #00000087, #00000036), url("/images/trails.jpg");
   background-image: linear-gradient(to right, #00000087, #00000036), url("https://w0.peakpx.com/wallpaper/214/1022/HD-wallpaper-abstract-dark-abstract-dark.jpg");
-  background-image: linear-gradient(to right, #0000005b, #00000036), url("https://static.vecteezy.com/system/resources/previews/010/705/558/non_2x/orange-modern-abstract-background-for-banner-landing-page-poster-presentation-or-flyer-free-vector.jpg");
+  background-image: linear-gradient(to right, #0000005b, #00000036), url("https://static.vecteezy.com/system/resources/previews/010/705/558/non_2x/orange-modern-abstract-background-for-banner-landing-page-poster-presentation-or-flyer-free-vector.jpg"); */
   /* background-image: url("https://static.vecteezy.com/system/resources/previews/010/705/558/non_2x/orange-modern-abstract-background-for-banner-landing-page-poster-presentation-or-flyer-free-vector.jpg");
   background-image: url("../images/c-bg.png"); */
   background-size: cover;

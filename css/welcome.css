@@ -80,8 +80,9 @@
     /* margin-top: 13%; */
   }
 
-  .welcome .cheading h1{
-    transform: translateY(90%);
+  .welcome .cheading h2{
+    transform: translateY(92%);
+    font-size: 3rem;
     display: inline-block;
   }
   
@@ -101,9 +102,13 @@
     background: #d8b55b;
   }
 
+
   @media (max-width:426px) {
     .welcome .heading {
       font-size: 35px;
+    }
+    .welcome .cheading h2{
+      font-size: 2.2rem;
     }
   }
   @media (max-width:376) {
@@ -111,3 +116,4 @@
       font-size: 30px;
     }
   }
+
